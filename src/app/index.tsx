@@ -4,12 +4,12 @@ import { createBrowserHistory } from 'history';
 import { useStrict } from 'mobx';
 import { Provider } from 'mobx-react';
 import { Router, Route, Switch } from 'react-router';
-import { Root } from './containers/Root';
 import { TodoApp } from './containers/TodoApp';
 import { TodoModel } from './models/TodoModel';
 import { TodoStore, RouterStore } from './stores';
 import { STORE_TODO, STORE_ROUTER } from './constants/stores';
 import { TodoFilter } from './constants/todos';
+import { App } from './App';
 
 // enable MobX strict mode
 useStrict(true);
@@ -29,16 +29,35 @@ const rootStores = {
   [STORE_ROUTER]: routerStore
 };
 
+export class AddDevTools extends React.Component<any, any> {
+
+  renderDevTool() {
+    if (process.env.NODE_ENV !== 'production') {
+      const DevTools = require('mobx-react-devtools').default;
+      return (<DevTools />);
+    }
+  };
+
+  render() {
+    return (
+      <div className="container">
+        {this.props.children}
+        {this.renderDevTool()}
+      </div>
+    );
+  }
+};
+
 // render react DOM
 ReactDOM.render(
   <Provider {...rootStores} >
-    <Root>
+    <AddDevTools>
       <Router history={history} >
         <Switch>
-          <Route path="/" component={TodoApp} />
+          <Route path="/" component={App} />
         </Switch>
       </Router>
-    </Root>
+    </AddDevTools>
   </Provider >,
   document.getElementById('root')
 );
