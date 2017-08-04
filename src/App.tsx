@@ -5,7 +5,7 @@ import * as _ from "lodash";
 import styled from "styled-components";
 var store = require("store");
 import { svgPadding as pad } from "./constants";
-import { neuronRadius, svgWidth, svgHeight } from "./constants";
+import { neuronRadius, svgWidth, svgHeight, colors } from "./constants";
 
 import Neuron from "./Neuron";
 import {Controls} from "./Controls";
@@ -36,7 +36,7 @@ export class App extends React.Component<any, any> {
   //init class variables
   stopId;
   timer;
-
+  xScale; yScale;
   constructor() {
     super();
     this.state = {
@@ -44,7 +44,8 @@ export class App extends React.Component<any, any> {
       time: 0,
       isPlaying: false,
       data: [],
-      plotMeta: {}
+      plotMeta: {},
+      links: []
     };
   }
   componentWillMount() {
@@ -53,9 +54,22 @@ export class App extends React.Component<any, any> {
 
     fetch("../assets/data/data.json").then(res => res.json()).then(data => {
       this.setState({ data });
-      const plotMeta = plotSetup(data, svgWidth, svgHeight);
+      const {xScale, yScale, ...plotMeta} = plotSetup(data, svgWidth, svgHeight);
+      this.xScale = xScale;
+      this.yScale = yScale;
       this.setState({ plotMeta });
+      fetch("../assets/data/links.json").then(res => res.json()).then(links => {
+      const scaledLinks = links.map(link => {
+        const sx = this.xScale(link.sourcePos[0]);
+        const sy = this.yScale(link.sourcePos[1]);
+        const tx = this.xScale(link.targetPos[0]);
+        const ty = this.yScale(link.targetPos[1]);
+        return {sx, sy, tx, ty}
+      })
+      this.setState({ links: scaledLinks });
     });
+    });
+    
   }
 
   componentDidUpdate() {
@@ -90,7 +104,7 @@ export class App extends React.Component<any, any> {
 
   render() {
     const { svgWidth, svgHeight, pos } = this.state.plotMeta;
-    const { data } = this.state;
+    const { data, links } = this.state;
     if (!svgWidth || !svgHeight || !pos) return <div>loading</div>;
     //render is a react specific function from React.Component.
     return (
@@ -104,6 +118,12 @@ export class App extends React.Component<any, any> {
             style={{maxHeight: '80vh'}}
             viewBox={`0,0, ${svgWidth}, ${svgHeight}`}
           >
+            {links.map((link,i) => {
+                const {sx,sy, tx, ty} = link
+                return (
+                  <line key={i} x1={sx} y1={sy} x2={tx} y2={ty} stroke={colors.connector}></line>
+                )
+            })}
             {pos.map((xy, i) => {
               //note this pos.map begings and ends with {}
               //.map is how we loop over arrays. in this case, we return a circle for each posisiton.

@@ -48,7 +48,7 @@ const PlayPause = isPlaying => {
 
 export const Controls: React.SFC<ControlProps> = (props: ControlProps) => {
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
+    <div style={{ display: "flex", alignContent: 'center', justifyContent: "center" }}>
       <div>
         {props.isPlaying &&
           <Pause
@@ -72,7 +72,10 @@ export const Controls: React.SFC<ControlProps> = (props: ControlProps) => {
             props.changeTime(value);
           }}
         />
+              <div style={{color: colors.neuronInActive, textAlign: 'center', fontSize: '16pt'}}>{props.time} / 6000 </div>
+
       </div>
+
     </div>
   );
 };

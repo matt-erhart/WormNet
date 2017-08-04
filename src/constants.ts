@@ -7,7 +7,7 @@ export const blue_00BCD4 = "#00BCD4";
 
 export const colors = {
  neuronActive: yellow_fff600, 
- neuronInActive: grey_666666, 
+ neuronInActive: grey_666666,
  connector: grey_2f2f2f, 
  controls: blue_00BCD4,
 }
@@ -17,4 +17,4 @@ export const svgPadding = 30;
 export const svgWidth = 1000;
 export const svgHeight = 1000;
 
-export const neuronRadius = {active: 20, inActive: 5}
+export const neuronRadius = {active: 12, inActive: 5}
