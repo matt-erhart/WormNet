@@ -20,17 +20,32 @@ function getCsvData(path) {
 Promise.all([
   getCsvData(dataDir + "277_positions.dat"),
   getCsvData(dataDir + "spikeMat.csv"),
-  getCsvData(dataDir + "celldata.dat")
-]).then(posSpikes => {
-  let pos = posSpikes[0];
-  let spikes = posSpikes[1];
-  let labels = posSpikes[2];
+  getCsvData(dataDir + "celldata.dat"),
+  getCsvData(dataDir + "277_dist_adj_mat.dat")
+]).then(data => {
+  let pos = data[0];
+  let spikes = data[1];
+  let labels = data[2];
+  let linkMat = data[3];
 
+  let links = []
+  linkMat.forEach((row, rowi) => {
+    row.forEach((col, coli) => {
+      if (col !== 'Inf') {
+        links.push({source: rowi, target: coli, value: col, sourcePos: pos[rowi], targetPos: pos[coli]})
+      }
+    });
+  });
+
+  
   let json = [];
   pos.forEach((val, i) => {
     json.push({ pos: val, spikes: spikes[i], label: labels[i][0] });
   });
-  jsonfile.writeFile(dataDir+'data.json', json, { spaces: 2 }, function(err) {
+  jsonfile.writeFile(dataDir + "data.json", json, { spaces: 2 }, function(err) {
+    console.error(err);
+  });
+  jsonfile.writeFile(dataDir + "links.json", links, { spaces: 2 }, function(err) {
     console.error(err);
   });
 });
