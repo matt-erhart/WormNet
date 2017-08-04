@@ -17,10 +17,7 @@ module.exports = {
     vendor: [
       'react',
       'react-dom',
-      'react-router',
-      'mobx',
-      'mobx-react',
-      'mobx-react-router'
+      'styled-components'
     ]
   },
   output: {
@@ -46,37 +43,6 @@ module.exports = {
             'react-hot-loader',
             'awesome-typescript-loader'
           ]
-      },
-      // css 
-      {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              query: {
-                modules: true,
-                sourceMap: !isProduction,
-                importLoaders: 1,
-                localIdentName: '[local]__[hash:base64:5]'
-              }
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                ident: 'postcss',
-                plugins: [
-                  require('postcss-import')({ addDependencyTo: webpack }),
-                  require('postcss-url')(),
-                  require('postcss-cssnext')(),
-                  require('postcss-reporter')(),
-                  require('postcss-browser-reporter')({ disabled: isProduction }),
-                ]
-              }
-            }
-          ]
-        })
       },
       // static assets 
       { test: /\.html$/, use: 'html-loader' },
