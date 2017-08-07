@@ -7,7 +7,7 @@
         "lib": ["es2015", "es2016", "es2017", "dom"],
         "strict": false,
         "sourceMap": true,
-        "declaration": true,
+        "declaration": false,
         "allowJs": true,
         "noImplicitAny": false,
             "noImplicitReturns": false,
@@ -15,7 +15,6 @@
         "allowSyntheticDefaultImports": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "declarationDir": "dist/types",
         "outDir": "compiled",
         "typeRoots": [
           "node_modules/@types"

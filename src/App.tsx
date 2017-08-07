@@ -6,9 +6,9 @@ import styled from "styled-components";
 var store = require("store");
 import { svgPadding as pad } from "./constants";
 import { neuronRadius, svgWidth, svgHeight, colors } from "./constants";
-
-import Neuron from "./Neuron";
 import {Controls} from "./Controls";
+
+
 
 const plotSetup = (data, svgWidth = 1000, svgHeight = 1000) => {
   const xs: number[] = data.map(row => +row.pos[0]); //create an array of x positions
@@ -82,7 +82,7 @@ export class App extends React.Component<any, any> {
       //save to this.timer so we can use this.timer.stop()
       if (this.state.time < this.state.data[0].spikes.length)
         this.setState({ time: this.state.time + 1 }); //increment time this way so react will rerender on change
-    }, 35);
+    }, 17);
   };
 
   pauseTimer = () => {
@@ -130,13 +130,13 @@ export class App extends React.Component<any, any> {
               const isSpiking = +data[i].spikes[this.state.time] === 1; //data has all the cells, each with {label, spikes, pos} fields
               return (
                 //these parens are important in react
-                <Neuron
+                <circle
                   key={i}
                   cx={xy[0]}
                   cy={xy[1]}
                   r={isSpiking ? neuronRadius.active : neuronRadius.inActive} // this ? : business is called a ternary operator. means if isspiking is true return 20 else return 5
                   name={data[i].label}
-                  active={isSpiking}
+                  fill={isSpiking ? colors.neuronActive : colors.neuronInActive}
                 />
               );
             })}

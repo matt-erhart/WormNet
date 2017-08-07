@@ -11,20 +11,6 @@ interface ControlProps {
   changeTime: Function;
   isPlaying: boolean;
 }
-console.log(IconButton);
-// const FlexContainer = styled.div`
-//   display: flex;
-//   flex-flow: row;
-//   align-content: center;
-//   align-items: center;
-//   justify-content: center;
-// `;
-
-// const Play = styled(PlayArrow)`
-// width: 100;
-// height: 100;
-// display: 'inline-block';
-// `;
 
 const IconStyles = { width: 100, height: 100, display: "inline-block" };
 
@@ -48,7 +34,13 @@ const PlayPause = isPlaying => {
 
 export const Controls: React.SFC<ControlProps> = (props: ControlProps) => {
   return (
-    <div style={{ display: "flex", alignContent: 'center', justifyContent: "center" }}>
+    <div
+      style={{
+        display: "flex",
+        alignContent: "center",
+        justifyContent: "center"
+      }}
+    >
       <div>
         {props.isPlaying &&
           <Pause
@@ -72,10 +64,16 @@ export const Controls: React.SFC<ControlProps> = (props: ControlProps) => {
             props.changeTime(value);
           }}
         />
-              <div style={{color: colors.neuronInActive, textAlign: 'center', fontSize: '16pt'}}>{props.time} / 6000 </div>
-
+        <div
+          style={{
+            color: colors.neuronInActive,
+            textAlign: "center",
+            fontSize: "16pt"
+          }}
+        >
+          {props.time} / 6000{" "}
+        </div>
       </div>
-
     </div>
   );
 };
