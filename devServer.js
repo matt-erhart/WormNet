@@ -16,10 +16,7 @@ Sparky.task("build", () => {
         title: "WormNet",
         template: "src/index.html"
       })
-    ],
-    globals: {
-        default: 'react-addons-perf'
-    }
+    ]
   });
 
   fuse.dev();
