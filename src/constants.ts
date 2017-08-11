@@ -10,6 +10,12 @@ export const colors = {
  neuronInActive: grey_666666,
  connector: grey_2f2f2f, 
  controls: blue_00BCD4,
+ inhibitsActive: '#FF2D00',
+ inhibitsInActive: '#AA8B8B',
+ excitesActive: '#04FF00',
+ excitesInActive: '#8BAA8C',
+ inhibitsPropagation: "#FF9B44",
+ excitesPropagation: "#32EAB6",
 }
 
 export const timeSample = (2.5 * 10) ^ -6;
@@ -18,3 +24,4 @@ export const svgWidth = 1000;
 export const svgHeight = 1000;
 
 export const neuronRadius = {active: 12, inActive: 5}
+export const linkOpacity = .6;

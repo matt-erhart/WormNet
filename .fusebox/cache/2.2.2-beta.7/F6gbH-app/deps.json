@@ -186,6 +186,11 @@
       },
       "name": "styled-components",
       "version": "2.1.1"
+    },
+    "lodash@4.17.4": {
+      "deps": {},
+      "name": "lodash",
+      "version": "4.17.4"
     }
   },
   "flat": {
@@ -817,6 +822,13 @@
       "version": "1.0.1",
       "files": [
         "index.js"
+      ]
+    },
+    "lodash@4.17.4": {
+      "name": "lodash",
+      "version": "4.17.4",
+      "files": [
+        "lodash.js"
       ]
     }
   }

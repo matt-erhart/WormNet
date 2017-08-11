@@ -13,6 +13,9 @@
     "fast-csv": "^2.4.0",
     "jsonfile": "^3.0.1",
     "lodash": "^4.17.4",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "prop-types": "^15.5.10",
+    "react-web-animation": "^0.3.4",
+    "uid-safe": "^2.1.5"
   }
 }
