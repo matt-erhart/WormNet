@@ -118,27 +118,31 @@ export class App extends React.Component<any, any> {
   };
   setTime = value => {
     this.setState({ time: value });
+    this.activationLocations(this.state.propagation, value);
+    
   };
 
   activationLocations(propagation, time) {
     if (!propagation || !time) return;
     //when time is zero
-    const propagationsStarting = propagation[time] || []; //starting activations
-    const propagationsContinuing = this.state.propagationsOnScreen.filter(p => {
-          return _.get(p, 'targetActivationTime', 0) >= time;
-        })
+    // const propagationsStarting = propagation[time] || []; //starting activations
+    // const propagationsContinuing = this.state.propagationsOnScreen.filter(p => {
+    //       return _.get(p, 'targetActivationTime', 0) >= time && _.get(p, 'sourceActivationTime') < time;
+    //     })
 
-    let propagationsOnScreen = _.concat(propagationsStarting,
-      propagationsContinuing
-    );
-
+    let propagationsOnScreen = _.flatten(this.state.propagation).filter(p => {
+      return _.get(p, 'targetActivationTime') >= time && _.get(p, 'sourceActivationTime') < time;
+    })
     propagationsOnScreen.forEach((p,i) => {
       const progress = (time - p.sourceActivationTime) / p.timeDiff;
       const pos = d3.interpolateObject(p.sourcePos, p.targetPos)(progress);
       propagationsOnScreen[i].interpPos = [this.xScale(+pos[0]), this.yScale(+pos[1])]
     });
-    console.log('debug', propagationsStarting, propagationsContinuing, propagationsOnScreen)
     this.setState({ propagationsOnScreen });
+  }
+
+  activationLocationOnScrub(){
+    //
   }
 
   render() {
