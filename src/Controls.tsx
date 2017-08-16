@@ -10,6 +10,7 @@ interface ControlProps {
   togglePlay: Function;
   changeTime: Function;
   isPlaying: boolean;
+  nTimePoints: number;
 }
 
 const IconStyles = { width: 100, height: 100, display: "inline-block" };
@@ -57,7 +58,7 @@ export const Controls: React.SFC<ControlProps> = (props: ControlProps) => {
         <Slider
           style={{ width: "50vw", display: "inline-block", height: "83px" }}
           min={0}
-          max={6000}
+          max={props.nTimePoints}
           step={1}
           value={props.time}
           onChange={(event, value) => {
@@ -71,7 +72,7 @@ export const Controls: React.SFC<ControlProps> = (props: ControlProps) => {
             fontSize: "16pt"
           }}
         >
-          {props.time} / 6000{" "}
+          {props.time} / {props.nTimePoints}{" "}
         </div>
       </div>
     </div>

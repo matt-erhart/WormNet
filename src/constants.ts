@@ -23,5 +23,5 @@ export const svgPadding = 30;
 export const svgWidth = 1000;
 export const svgHeight = 1000;
 
-export const neuronRadius = {active: 12, inActive: 5}
+export const neuronRadius = {active: 12, inActive: 4}
 export const linkOpacity = .6;

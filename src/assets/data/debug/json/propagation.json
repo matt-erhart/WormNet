@@ -1,0 +1,163 @@
+[
+  [
+    {
+      "source": 4,
+      "target": 0,
+      "sourcePos": [
+        "3",
+        "5"
+      ],
+      "targetPos": [
+        "5",
+        "5"
+      ],
+      "targetType": "excites",
+      "sourceType": "excites",
+      "targetActivationTime": 0,
+      "sourceActivationTime": 0,
+      "timeDiff": 0,
+      "id": "3G4lnp7WmBCGGE-pfATqjobE"
+    }
+  ],
+  [
+    {
+      "source": 1,
+      "target": 0,
+      "sourcePos": [
+        "5",
+        "3"
+      ],
+      "targetPos": [
+        "5",
+        "5"
+      ],
+      "targetType": "excites",
+      "sourceType": "excites",
+      "targetActivationTime": 3,
+      "sourceActivationTime": 1,
+      "timeDiff": 2,
+      "id": "PDKTUrvbMtI3uTEqhqcf8O_q"
+    }
+  ],
+  [
+    {
+      "source": 2,
+      "target": 0,
+      "sourcePos": [
+        "4",
+        "2"
+      ],
+      "targetPos": [
+        "5",
+        "5"
+      ],
+      "targetType": "excites",
+      "sourceType": "excites",
+      "targetActivationTime": 5,
+      "sourceActivationTime": 2,
+      "timeDiff": 3,
+      "id": "KLJyhmje9Fk-S9SVYqyLQaWr"
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "sourcePos": [
+        "4",
+        "2"
+      ],
+      "targetPos": [
+        "3",
+        "3"
+      ],
+      "targetType": "inhibits",
+      "sourceType": "excites",
+      "targetActivationTime": 3,
+      "sourceActivationTime": 2,
+      "timeDiff": 1,
+      "id": "PSISq73E6LeGiwicJGlFMFiZ"
+    }
+  ],
+  [],
+  [],
+  [
+    {
+      "source": 2,
+      "target": 3,
+      "sourcePos": [
+        "4",
+        "2"
+      ],
+      "targetPos": [
+        "3",
+        "3"
+      ],
+      "targetType": "inhibits",
+      "sourceType": "excites",
+      "targetActivationTime": 6,
+      "sourceActivationTime": 5,
+      "timeDiff": 1,
+      "id": "VtYHlXGZLbH4pUbMcAygkNMX"
+    }
+  ],
+  [
+    {
+      "source": 3,
+      "target": 0,
+      "sourcePos": [
+        "3",
+        "3"
+      ],
+      "targetPos": [
+        "5",
+        "5"
+      ],
+      "targetType": "excites",
+      "sourceType": "inhibits",
+      "targetActivationTime": 7,
+      "sourceActivationTime": 6,
+      "timeDiff": 1,
+      "id": "Tle4415Ea34irRgjt9Vp0rHq"
+    }
+  ],
+  [
+    {
+      "source": 2,
+      "target": 3,
+      "sourcePos": [
+        "4",
+        "2"
+      ],
+      "targetPos": [
+        "3",
+        "3"
+      ],
+      "targetType": "inhibits",
+      "sourceType": "excites",
+      "targetActivationTime": 8,
+      "sourceActivationTime": 7,
+      "timeDiff": 1,
+      "id": "t-r5jDEKgpGA09v-QRODaHAI"
+    }
+  ],
+  [
+    {
+      "source": 3,
+      "target": 0,
+      "sourcePos": [
+        "3",
+        "3"
+      ],
+      "targetPos": [
+        "5",
+        "5"
+      ],
+      "targetType": "excites",
+      "sourceType": "inhibits",
+      "targetActivationTime": 9,
+      "sourceActivationTime": 8,
+      "timeDiff": 1,
+      "id": "Qjy_234dM3GeicMOtuOwXyLf"
+    }
+  ],
+  []
+]

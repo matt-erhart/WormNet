@@ -58,11 +58,11 @@ export class App extends React.Component<any, any> {
   componentWillMount() {
     const savedtime = store.get("time") || 0;
     this.setState({ time: savedtime });
-
+    const dataDir = '../assets/data/277'
     Promise.all([
-      fetch("../assets/data/data.json").then(res => res.json()),
-      fetch("../assets/data/links.json").then(res => res.json()),
-      fetch("../assets/data/propagation.json").then(res => res.json())
+      fetch(dataDir + "/json/data.json").then(res => res.json()),
+      fetch(dataDir + "/json/links.json").then(res => res.json()),
+      fetch(dataDir + "/json/propagation.json").then(res => res.json())
     ]).then(json => {
       const data = json[0];
       const links = json[1];
@@ -83,7 +83,7 @@ export class App extends React.Component<any, any> {
         const sy = this.yScale(link.sourcePos[1]);
         const tx = this.xScale(link.targetPos[0]);
         const ty = this.yScale(link.targetPos[1]);
-        return { sx, sy, tx, ty };
+        return { sx, sy, tx, ty, id: link.id };
       });
       this.setState({ links: scaledLinks });
     });
@@ -98,9 +98,9 @@ export class App extends React.Component<any, any> {
     this.timer = d3.interval(elapsed => {
       //save to this.timer so we can use this.timer.stop()
       if (this.state.time < this.state.data[0].spikes.length)
-        this.setState({ time: this.state.time + 1 }); //increment time this way so react will rerender on change
-      this.activationLocations(this.state.propagation, this.state.time);
-    }, 15);
+        this.setState({ time: this.state.time + 1 }); //increment time this way so react will rerender on change        
+        this.activationLocations(this.state.propagation, this.state.time);
+    }, 10);
   };
 
   pauseTimer = () => {
@@ -119,7 +119,6 @@ export class App extends React.Component<any, any> {
   setTime = value => {
     this.setState({ time: value });
     this.activationLocations(this.state.propagation, value);
-    
   };
 
   activationLocations(propagation, time) {
@@ -130,10 +129,10 @@ export class App extends React.Component<any, any> {
     //       return _.get(p, 'targetActivationTime', 0) >= time && _.get(p, 'sourceActivationTime') < time;
     //     })
 
-    let propagationsOnScreen = _.flatten(this.state.propagation).filter(p => {
+    let propagationsOnScreen: any = _.flatten(this.state.propagation).filter(p => {
       return _.get(p, 'targetActivationTime') >= time && _.get(p, 'sourceActivationTime') < time;
     })
-    propagationsOnScreen.forEach((p,i) => {
+    propagationsOnScreen.forEach((p: any,i) => {
       const progress = (time - p.sourceActivationTime) / p.timeDiff;
       const pos = d3.interpolateObject(p.sourcePos, p.targetPos)(progress);
       propagationsOnScreen[i].interpPos = [this.xScale(+pos[0]), this.yScale(+pos[1])]
@@ -149,6 +148,7 @@ export class App extends React.Component<any, any> {
     const { svgWidth, svgHeight, pos } = this.state.plotMeta;
     const { data, links, propagation, time, propagationsOnScreen } = this.state;
     if (!svgWidth || !svgHeight || !pos || !propagation) return <div>loading</div>;
+    const nTimes = data[0].spikes.length;
     //render is a react specific function from React.Component.
     return (
       // the parens after return are important. also need to wrap all this html-like code in one element. a div in this case, as usual.
@@ -162,15 +162,16 @@ export class App extends React.Component<any, any> {
             viewBox={`0,0, ${svgWidth}, ${svgHeight}`}
           >
             {links.map((link, i) => {
-              const { sx, sy, tx, ty } = link;
+              const { sx, sy, tx, ty, id } = link;
               return (
                 <line
-                  key={i}
+                  key={id}
                   x1={sx}
                   y1={sy}
                   x2={tx}
                   y2={ty}
                   stroke={colors.connector}
+                  strokeWidth = {2}
                   style={{ opacity: linkOpacity }}
                 />
               );
@@ -181,7 +182,7 @@ export class App extends React.Component<any, any> {
                   key={p.id}
                   cx={p.interpPos[0]}
                   cy={p.interpPos[1]}
-                  r={8} // this ? : business is called a ternary operator. means if isspiking is true return 20 else return 5
+                  r={2} // this ? : business is called a ternary operator. means if isspiking is true return 20 else return 5
                   fill={p.sourceType === 'excites' ? colors.excitesPropagation : colors.inhibitsPropagation}
                 />
               )
@@ -205,12 +206,24 @@ export class App extends React.Component<any, any> {
                 />
               );
             })}
+            {/* {pos.map((xy, i) => {
+              return (
+                //these parens are important in react
+                <text
+                  key={i + '-text'}
+                  x={xy[0]}
+                  y={xy[1] - 15}
+                  fill={'white'}
+                > {data[i].label} </text>
+              );
+            })} */}
           </svg>
           <Controls
             time={this.state.time}
             togglePlay={this.toggleTimer}
             changeTime={this.setTime}
             isPlaying={this.state.isPlaying}
+            nTimePoints={nTimes}
           />
         </div>
       </div>

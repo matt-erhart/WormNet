@@ -1,0 +1,77 @@
+[
+  {
+    "id": "9r5FOKVWnPhofweHRbNME8SU",
+    "source": 4,
+    "target": 0,
+    "targetType": "excites",
+    "sourceType": "excites",
+    "sourcePos": [
+      3,
+      5
+    ],
+    "targetPos": [
+      5,
+      5
+    ]
+  },
+  {
+    "id": "SKPDCax-eEg8sf9zM7pmFeIt",
+    "source": 1,
+    "target": 0,
+    "targetType": "excites",
+    "sourceType": "excites",
+    "sourcePos": [
+      5,
+      3
+    ],
+    "targetPos": [
+      5,
+      5
+    ]
+  },
+  {
+    "id": "cg-zvYpcaLLdRq_yYz5pbfCX",
+    "source": 2,
+    "target": 0,
+    "targetType": "excites",
+    "sourceType": "excites",
+    "sourcePos": [
+      4,
+      2
+    ],
+    "targetPos": [
+      5,
+      5
+    ]
+  },
+  {
+    "id": "52nU8RczdtPBhmyz0pgNH9a8",
+    "source": 3,
+    "target": 0,
+    "targetType": "excites",
+    "sourceType": "inhibits",
+    "sourcePos": [
+      3,
+      3
+    ],
+    "targetPos": [
+      5,
+      5
+    ]
+  },
+  {
+    "id": "Dx09XIx0TAz4HEzSI4Px5vgh",
+    "source": 2,
+    "target": 3,
+    "targetType": "inhibits",
+    "sourceType": "excites",
+    "sourcePos": [
+      4,
+      2
+    ],
+    "targetPos": [
+      3,
+      3
+    ]
+  }
+]

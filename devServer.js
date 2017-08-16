@@ -26,7 +26,7 @@ Sparky.task("build", () => {
 });
 
 Sparky.task("copy-data", () => { //need to start with ./ not ./src for base to work
-  return Sparky.src("./assets/data/*.json", { base: "./src" }).dest(
+  return Sparky.src("./assets/data/**/*.json", { base: "./src" }).dest(
     "./dist"
   );
 });

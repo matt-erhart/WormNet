@@ -100,23 +100,7 @@
           "version": "3.0.7"
         },
         "recompose@0.24.0": {
-          "deps": {
-            "hoist-non-react-statics@1.2.0": {
-              "deps": {},
-              "name": "hoist-non-react-statics",
-              "version": "1.2.0"
-            },
-            "change-emitter@0.1.6": {
-              "deps": {},
-              "name": "change-emitter",
-              "version": "0.1.6"
-            },
-            "symbol-observable@1.0.4": {
-              "deps": {},
-              "name": "symbol-observable",
-              "version": "1.0.4"
-            }
-          },
+          "deps": {},
           "name": "recompose",
           "version": "0.24.0"
         },
@@ -155,42 +139,15 @@
       "name": "d3",
       "version": "4.10.0"
     },
-    "store@2.0.12": {
-      "deps": {},
-      "name": "store",
-      "version": "2.0.12"
-    },
-    "styled-components@2.1.1": {
-      "deps": {
-        "is-plain-object@2.0.4": {
-          "deps": {
-            "isobject@3.0.1": {
-              "deps": {},
-              "name": "isobject",
-              "version": "3.0.1"
-            }
-          },
-          "name": "is-plain-object",
-          "version": "2.0.4"
-        },
-        "stylis@3.2.8": {
-          "deps": {},
-          "name": "stylis",
-          "version": "3.2.8"
-        },
-        "is-function@1.0.1": {
-          "deps": {},
-          "name": "is-function",
-          "version": "1.0.1"
-        }
-      },
-      "name": "styled-components",
-      "version": "2.1.1"
-    },
     "lodash@4.17.4": {
       "deps": {},
       "name": "lodash",
       "version": "4.17.4"
+    },
+    "store@2.0.12": {
+      "deps": {},
+      "name": "store",
+      "version": "2.0.12"
     }
   },
   "flat": {
@@ -663,7 +620,6 @@
       "version": "0.24.0",
       "files": [
         "compose.js",
-        "cjs/Recompose.js",
         "shallowEqual.js",
         "pure.js",
         "shouldUpdate.js",
@@ -675,29 +631,6 @@
         "utils/createEagerElementUtil.js",
         "isReferentiallyTransparentFunctionComponent.js",
         "isClassComponent.js"
-      ]
-    },
-    "hoist-non-react-statics@1.2.0": {
-      "name": "hoist-non-react-statics",
-      "version": "1.2.0",
-      "files": [
-        "index.js"
-      ]
-    },
-    "change-emitter@0.1.6": {
-      "name": "change-emitter",
-      "version": "0.1.6",
-      "files": [
-        "lib/index.js"
-      ]
-    },
-    "symbol-observable@1.0.4": {
-      "name": "symbol-observable",
-      "version": "1.0.4",
-      "files": [
-        "index.js",
-        "lib/index.js",
-        "lib/ponyfill.js"
       ]
     },
     "simple-assign@0.1.0": {
@@ -743,6 +676,13 @@
         "build/d3.js"
       ]
     },
+    "lodash@4.17.4": {
+      "name": "lodash",
+      "version": "4.17.4",
+      "files": [
+        "lodash.js"
+      ]
+    },
     "store@2.0.12": {
       "name": "store",
       "version": "2.0.12",
@@ -759,76 +699,6 @@
         "storages/memoryStorage.js",
         "plugins/json2.js",
         "plugins/lib/json2.js"
-      ]
-    },
-    "styled-components@2.1.1": {
-      "name": "styled-components",
-      "version": "2.1.1",
-      "files": [
-        "lib/index.js",
-        "lib/utils/flatten.js",
-        "lib/types.js",
-        "lib/utils/stringifyRules.js",
-        "lib/utils/generateAlphabeticName.js",
-        "lib/constructors/css.js",
-        "lib/utils/interleave.js",
-        "lib/models/ServerStyleSheet.js",
-        "lib/models/StyleSheet.js",
-        "lib/models/BrowserStyleSheet.js",
-        "lib/utils/extractCompsFromCSS.js",
-        "lib/models/StyleSheetManager.js",
-        "lib/models/StyledComponent.js",
-        "lib/utils/createWarnTooManyClasses.js",
-        "lib/utils/validAttr.js",
-        "lib/utils/isTag.js",
-        "lib/utils/isStyledComponent.js",
-        "lib/utils/getComponentName.js",
-        "lib/models/AbstractStyledComponent.js",
-        "lib/models/ThemeProvider.js",
-        "lib/utils/create-broadcast.js",
-        "lib/models/ComponentStyle.js",
-        "lib/vendor/glamor/hash.js",
-        "lib/constructors/styled.js",
-        "lib/utils/domElements.js",
-        "lib/constructors/keyframes.js",
-        "lib/constructors/injectGlobal.js",
-        "lib/constructors/constructWithOptions.js",
-        "lib/hoc/withTheme.js"
-      ]
-    },
-    "is-plain-object@2.0.4": {
-      "name": "is-plain-object",
-      "version": "2.0.4",
-      "files": [
-        "index.js"
-      ]
-    },
-    "isobject@3.0.1": {
-      "name": "isobject",
-      "version": "3.0.1",
-      "files": [
-        "index.js"
-      ]
-    },
-    "stylis@3.2.8": {
-      "name": "stylis",
-      "version": "3.2.8",
-      "files": [
-        "stylis.js"
-      ]
-    },
-    "is-function@1.0.1": {
-      "name": "is-function",
-      "version": "1.0.1",
-      "files": [
-        "index.js"
-      ]
-    },
-    "lodash@4.17.4": {
-      "name": "lodash",
-      "version": "4.17.4",
-      "files": [
-        "lodash.js"
       ]
     }
   }
