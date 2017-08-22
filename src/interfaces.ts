@@ -56,14 +56,16 @@ let exampleJson = {
       neurotransimmters: "gaba",
       type: "inhibits",
       label: "neuron1",
-      spikeTimes: [9, 15, 22, 101]
+      spikeTimes: [9, 15, 22, 101],
+      position: [1,0]
     },
     {
       id: "neuron2-8YUEbz_hYCK0gIEIdALqxigW",
       neurotransimmters: "gaba",
       type: "inhibits",
       label: "neuron2",
-      spikeTimes: [9, 15, 22, 101]
+      spikeTimes: [9, 15, 22, 101],
+      position: [1,2]
     }
   ],
   links: [
