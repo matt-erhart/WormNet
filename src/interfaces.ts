@@ -37,7 +37,7 @@ export interface link {
  * @param id - unique among all ids, used in animation
  */
 export interface propagation {
-  id: propagationId;
+  id?: propagationId;
   source: { id: neuronId; activationTime: number };
   target: { id: neuronId; activationTime: number };
   pos?: {current: number[], source: number[]}

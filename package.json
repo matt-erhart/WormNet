@@ -26,7 +26,9 @@
     "webpack": "^3.4.1"
   },
   "dependencies": {
+    "@types/firebase": "^2.4.32",
     "d3": "^4.10.0",
+    "firebase": "^4.3.0",
     "gsap": "^1.20.2",
     "lodash": "^4.17.4",
     "material-ui": "^0.18.7",
@@ -35,11 +37,13 @@
     "react-addons-perf": "^15.4.2",
     "react-dom": "^15.6.1",
     "react-gsap-enhancer": "^0.3.0",
-    "react-router": "^4.1.1",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.0",
     "react-tap-event-plugin": "^2.0.1",
     "recompose": "^0.24.0",
     "rxjs": "^5.4.2",
     "store": "^2.0.12",
-    "styled-components": "^2.1.1"
+    "styled-components": "^2.1.1",
+    "uid-safe": "^2.1.5"
   }
 }

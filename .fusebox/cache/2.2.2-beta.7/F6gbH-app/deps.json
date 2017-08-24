@@ -134,6 +134,17 @@
       "name": "react-addons-perf",
       "version": "15.4.2"
     },
+    "firebase@4.3.0": {
+      "deps": {
+        "promise-polyfill@6.0.2": {
+          "deps": {},
+          "name": "promise-polyfill",
+          "version": "6.0.2"
+        }
+      },
+      "name": "firebase",
+      "version": "4.3.0"
+    },
     "d3@4.10.0": {
       "deps": {},
       "name": "d3",
@@ -148,6 +159,23 @@
       "deps": {},
       "name": "store",
       "version": "2.0.12"
+    },
+    "uid-safe@2.1.5": {
+      "deps": {
+        "random-bytes@1.0.0": {
+          "deps": {
+            "crypto@0.0.0": {
+              "deps": {},
+              "name": "crypto",
+              "version": "0.0.0"
+            }
+          },
+          "name": "random-bytes",
+          "version": "1.0.0"
+        }
+      },
+      "name": "uid-safe",
+      "version": "2.1.5"
     }
   },
   "flat": {
@@ -669,6 +697,167 @@
         "index.js"
       ]
     },
+    "firebase@4.3.0": {
+      "name": "firebase",
+      "version": "4.3.0",
+      "files": [
+        "firebase-browser.js",
+        "app.js",
+        "utils/shims.js",
+        "app/firebase_app.js",
+        "app/subscribe.js",
+        "utils/promise.js",
+        "utils/globalScope.js",
+        "app/errors.js",
+        "utils/deep_copy.js",
+        "auth.js",
+        "database.js",
+        "database/api/Database.js",
+        "database/core/util/util.js",
+        "utils/assert.js",
+        "utils/constants.js",
+        "utils/obj.js",
+        "utils/crypt.js",
+        "utils/Sha1.js",
+        "utils/hash.js",
+        "utils/utf8.js",
+        "utils/json.js",
+        "database/core/storage/storage.js",
+        "database/core/storage/DOMStorageWrapper.js",
+        "database/core/storage/MemoryStorage.js",
+        "utils/environment.js",
+        "database/core/util/libs/parser.js",
+        "database/core/util/Path.js",
+        "database/core/RepoInfo.js",
+        "database/realtime/Constants.js",
+        "database/api/Reference.js",
+        "database/api/onDisconnect.js",
+        "utils/validation.js",
+        "database/core/util/validation.js",
+        "database/api/TransactionResult.js",
+        "database/core/util/NextPushId.js",
+        "database/api/Query.js",
+        "database/core/snap/indexes/KeyIndex.js",
+        "database/core/snap/indexes/Index.js",
+        "database/core/snap/Node.js",
+        "database/core/snap/indexes/PriorityIndex.js",
+        "database/core/snap/LeafNode.js",
+        "database/core/snap/snap.js",
+        "database/core/snap/indexes/ValueIndex.js",
+        "database/core/snap/nodeFromJSON.js",
+        "database/core/snap/ChildrenNode.js",
+        "database/core/util/SortedMap.js",
+        "database/core/snap/IndexMap.js",
+        "database/core/snap/childSet.js",
+        "database/core/snap/comparators.js",
+        "database/core/snap/indexes/PathIndex.js",
+        "database/core/view/EventRegistration.js",
+        "database/api/DataSnapshot.js",
+        "database/core/view/Event.js",
+        "database/core/Repo.js",
+        "database/core/util/ServerValues.js",
+        "database/core/SparseSnapshotTree.js",
+        "database/core/util/CountedSet.js",
+        "database/core/SyncTree.js",
+        "database/core/operation/AckUserWrite.js",
+        "database/core/operation/Operation.js",
+        "database/core/util/ImmutableTree.js",
+        "database/core/operation/ListenComplete.js",
+        "database/core/operation/Merge.js",
+        "database/core/operation/Overwrite.js",
+        "database/core/SyncPoint.js",
+        "database/core/view/CacheNode.js",
+        "database/core/view/ViewCache.js",
+        "database/core/view/View.js",
+        "database/core/view/filter/IndexedFilter.js",
+        "database/core/view/Change.js",
+        "database/core/view/ViewProcessor.js",
+        "database/core/view/ChildChangeAccumulator.js",
+        "database/core/view/CompleteChildSource.js",
+        "database/core/view/EventGenerator.js",
+        "database/core/WriteTree.js",
+        "database/core/CompoundWrite.js",
+        "database/core/SnapshotHolder.js",
+        "database/core/AuthTokenProvider.js",
+        "database/core/stats/StatsManager.js",
+        "database/core/stats/StatsCollection.js",
+        "database/core/stats/StatsReporter.js",
+        "database/core/stats/StatsListener.js",
+        "database/core/view/EventQueue.js",
+        "database/core/PersistentConnection.js",
+        "database/core/util/VisibilityMonitor.js",
+        "database/core/util/EventEmitter.js",
+        "database/core/util/OnlineMonitor.js",
+        "utils/jwt.js",
+        "database/realtime/Connection.js",
+        "database/realtime/TransportManager.js",
+        "database/realtime/BrowserPollConnection.js",
+        "database/realtime/polling/PacketReceiver.js",
+        "database/realtime/WebSocketConnection.js",
+        "database/core/ServerActions.js",
+        "database/core/ReadonlyRestClient.js",
+        "utils/util.js",
+        "database/core/view/QueryParams.js",
+        "database/core/view/filter/LimitedFilter.js",
+        "database/core/view/filter/RangedFilter.js",
+        "database/core/RepoManager.js",
+        "database/core/Repo_transaction.js",
+        "database/core/util/Tree.js",
+        "database/api/internal.js",
+        "database/api/test_access.js",
+        "storage.js",
+        "storage/implementation/string.js",
+        "storage/implementation/error.js",
+        "storage/implementation/constants.js",
+        "storage/implementation/taskenums.js",
+        "storage/implementation/xhriopool.js",
+        "storage/implementation/xhrio_network.js",
+        "storage/implementation/object.js",
+        "storage/implementation/promise_external.js",
+        "storage/implementation/type.js",
+        "storage/implementation/xhrio.js",
+        "storage/reference.js",
+        "storage/implementation/args.js",
+        "storage/implementation/metadata.js",
+        "storage/implementation/json.js",
+        "storage/implementation/location.js",
+        "storage/implementation/path.js",
+        "storage/implementation/url.js",
+        "storage/implementation/blob.js",
+        "storage/implementation/fs.js",
+        "storage/implementation/requests.js",
+        "storage/implementation/array.js",
+        "storage/implementation/requestinfo.js",
+        "storage/task.js",
+        "storage/implementation/observer.js",
+        "storage/tasksnapshot.js",
+        "storage/implementation/async.js",
+        "storage/service.js",
+        "storage/implementation/authwrapper.js",
+        "storage/implementation/failrequest.js",
+        "storage/implementation/requestmap.js",
+        "storage/implementation/request.js",
+        "storage/implementation/backoff.js",
+        "messaging.js",
+        "messaging/controllers/window-controller.js",
+        "messaging/controllers/controller-interface.js",
+        "messaging/models/errors.js",
+        "messaging/models/token-manager.js",
+        "messaging/helpers/array-buffer-to-base64.js",
+        "messaging/models/fcm-details.js",
+        "messaging/models/notification-permission.js",
+        "messaging/models/worker-page-message.js",
+        "messaging/models/default-sw.js",
+        "messaging/controllers/sw-controller.js"
+      ]
+    },
+    "promise-polyfill@6.0.2": {
+      "name": "promise-polyfill",
+      "version": "6.0.2",
+      "files": [
+        "promise.js"
+      ]
+    },
     "d3@4.10.0": {
       "name": "d3",
       "version": "4.10.0",
@@ -699,6 +888,27 @@
         "storages/memoryStorage.js",
         "plugins/json2.js",
         "plugins/lib/json2.js"
+      ]
+    },
+    "uid-safe@2.1.5": {
+      "name": "uid-safe",
+      "version": "2.1.5",
+      "files": [
+        "index.js"
+      ]
+    },
+    "random-bytes@1.0.0": {
+      "name": "random-bytes",
+      "version": "1.0.0",
+      "files": [
+        "index.js"
+      ]
+    },
+    "crypto@0.0.0": {
+      "name": "crypto",
+      "version": "0.0.0",
+      "files": [
+        "index.js"
       ]
     }
   }
