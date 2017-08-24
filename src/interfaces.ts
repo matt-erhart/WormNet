@@ -40,7 +40,7 @@ export interface propagation {
   id: propagationId;
   source: { id: neuronId; activationTime: number };
   target: { id: neuronId; activationTime: number };
-  pos?: number[]
+  pos?: {current: number[], source: number[]}
 }
 
 export interface jsonOutput {

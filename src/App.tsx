@@ -52,7 +52,7 @@ export class App extends React.Component<any, any> {
       neurons: [],
       plotMeta: {},
       links: [],
-      propagation: [],
+      propagations: [],
       propagationsOnScreen: []
     };
   }
@@ -70,7 +70,7 @@ export class App extends React.Component<any, any> {
 
   componentWillMount() {
     const savedtime = store.get("time") || 0;
-    this.setState({ time: savedtime });
+    this.setTime(savedtime);
     const dataDir = "../assets/data";
     Promise.all([
       fetch(dataDir + "/feed_json.json").then(res => res.json())
@@ -79,8 +79,9 @@ export class App extends React.Component<any, any> {
     ]).then(json => {
       let neuronData: neuron[] = json[0].neurons;
       const links: link[] = json[0].links;
-      const propagation: propagation[] = json[0].propagation;
-      this.setState({ propagation });
+      const propagations: propagation[] = json[0].propagations;
+
+      this.setState({ propagations });
       const { neurons, ...plotMeta } = plotSetup(
         neuronData,
         svgWidth,
@@ -119,7 +120,7 @@ export class App extends React.Component<any, any> {
     //d3.interval fires every 35ms
     this.timer = d3.interval(elapsed => {
       //save to this.timer so we can use this.timer.stop()
-      if (this.state.time < this.state.data[0].spikes.length)
+      if (this.state.time < 6000)
         this.setState({ time: this.state.time + 1 }); //increment time this way so react will rerender on change
       this.activationLocations(this.state.propagation, this.state.time);
     }, 10);
@@ -140,18 +141,18 @@ export class App extends React.Component<any, any> {
   };
   setTime = value => {
     this.setState({ time: value });
-    this.activationLocations(this.state.propagation, value);
+    this.activationLocations(this.state.propagations, value);
   };
 
-  activationLocations(propagation, time) {
-    if (!propagation || !time) return;
+  activationLocations(propagations, time) {
+    if (!propagations || !time) return;
     //when time is zero
     // const propagationsStarting = propagation[time] || []; //starting activations
     // const propagationsContinuing = this.state.propagationsOnScreen.filter(p => {
     //       return _.get(p, 'targetActivationTime', 0) >= time && _.get(p, 'sourceActivationTime') < time;
     //     })
 
-    let propagationsOnScreen: propagation[] = this.state.propagation.filter(
+    let propagationsOnScreen: propagation[] = this.state.propagations.filter(
       p => {
         return (
           _.get(p, "target.activationTime") >= time &&
@@ -169,13 +170,10 @@ export class App extends React.Component<any, any> {
         p.target.id
       );
       const pos = d3.interpolateObject(source.posScaled, target.posScaled)(progress);
-      propagationsOnScreen[i].pos = pos;
+      propagationsOnScreen[i].pos = {current: pos, source: source.posScaled}
     });
-    this.setState({ propagationsOnScreen });
-  }
 
-  activationLocationOnScrub() {
-    //
+    this.setState({ propagationsOnScreen });
   }
 
   render() {
@@ -217,17 +215,30 @@ export class App extends React.Component<any, any> {
                 />
               );
             })}
-            {/* {propagationsOnScreen.map((p,i)=> {
+            {propagationsOnScreen.map((p,i)=> {
               return (
                 <circle
-                  key={p.id}
-                  cx={p.interpPos[0]}
-                  cy={p.interpPos[1]}
+                  key={i}
+                  cx={p.pos.current[0]}
+                  cy={p.pos.current[1]}
                   r={2} // this ? : business is called a ternary operator. means if isspiking is true return 20 else return 5
-                  fill={p.sourceType === 'excites' ? colors.excitesPropagation : colors.inhibitsPropagation}
+                  fill='white'
                 />
               )
-            })} */}
+            })}
+            {propagationsOnScreen.map((p,i)=> {
+              return (
+                <line
+                  key={i + 'line'}
+                  x1={p.pos.current[0]}
+                  y1={p.pos.current[1]}
+                  x2={p.pos.source[0]}
+                  y2={p.pos.source[1]}
+                  stroke='white'
+                  strokeWidth={1}
+                />
+              )
+            })}
             {neurons.map((neuron, i) => {
               //note this pos.map begings and ends with {}
               //.map is how we loop over arrays. in this case, we return a circle for each posisiton.
