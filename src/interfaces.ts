@@ -7,8 +7,9 @@ type linkChangesId = string;
     used to access info
     I use https://www.npmjs.com/package/uid-safe in javascript
 */
-interface neuron {
-  position: number[]; //2d number array
+export interface neuron {
+  pos: number[]; //2d number array
+  posScaled?: number[];
   neurotransmitters?: "acetycholine" | "gaba" | string; //specific names or any string
   type: "excites" | "inhibits" | string; //used for neuron color
   label: string; // display name
@@ -23,7 +24,7 @@ interface neuron {
  * these are the links that will be rendered
  * could derive them from propgation data
  */
-interface link {
+export interface link {
   id: linkId;
   source: { id: neuronId };
   target: { id: neuronId };
@@ -35,13 +36,14 @@ interface link {
 /**
  * @param id - unique among all ids, used in animation
  */
-interface propagation {
+export interface propagation {
   id: propagationId;
   source: { id: neuronId; activationTime: number };
   target: { id: neuronId; activationTime: number };
+  pos?: number[]
 }
 
-interface jsonOutput {
+export interface jsonOutput {
   neurons: neuron[]; // array of objects
   links: link[]; // array of objects
   propagations: propagation[]; // array of objects

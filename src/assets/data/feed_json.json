@@ -1,0 +1,2311 @@
+{
+"neurons": [
+{
+"pos": [ 
+ 0.08239300, 
+ -0.00098380 
+],
+"id": "neuronId1",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "ADFL",
+"spikeTimes": []
+},
+{
+"pos": [ 
+ 0.08327900, 
+ -0.00318420 
+],
+"id": "neuronId2",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "ADFR",
+"spikeTimes": [8,970,1932,2894,3856,4818,5780]
+},
+{
+"pos": [ 
+ 0.06517700, 
+ 0.00934610 
+],
+"id": "neuronId3",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "AIAL",
+"spikeTimes": [5,1005,1967,2929,3891,4853,5815]
+},
+{
+"pos": [ 
+ 0.05903000, 
+ 0.01151200 
+],
+"id": "neuronId4",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "AIAR",
+"spikeTimes": [21,989,1951,2913,3875,4837,5799]
+},
+{
+"pos": [ 
+ 0.07544100, 
+ 0.00612350 
+],
+"id": "neuronId5",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "AIBR",
+"spikeTimes": [5,994,1956,2918,3880,4842,5804]
+},
+{
+"pos": [ 
+ 0.03943500, 
+ 0.01518600 
+],
+"id": "neuronId6",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "AIYR",
+"spikeTimes": [17,994,1956,2918,3880,4842,5804]
+},
+{
+"pos": [ 
+ 0.04869800, 
+ 0.00270550 
+],
+"id": "neuronId7",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "AIZL",
+"spikeTimes": [14,1010,1972,2934,3896,4858,5820]
+},
+{
+"pos": [ 
+ 0.05756000, 
+ 0.00318420 
+],
+"id": "neuronId8",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "AIZR",
+"spikeTimes": [22,984,1946,2908,3870,4832,5794]
+},
+{
+"pos": [ 
+ 0.06911200, 
+ 0.00049190 
+],
+"id": "neuronId9",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "ASEL",
+"spikeTimes": [1021,1983,2945,3907,4869,5831]
+},
+{
+"pos": [ 
+ 0.07176700, 
+ -0.00073481 
+],
+"id": "neuronId10",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "ASER",
+"spikeTimes": [12,998,1960,2922,3884,4846,5808]
+},
+{
+"pos": [ 
+ 0.08952600, 
+ 0.00172170 
+],
+"id": "neuronId11",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "AVAL",
+"spikeTimes": [16,973,1935,2897,3859,4821,5783]
+},
+{
+"pos": [ 
+ 0.09087200, 
+ -0.00024494 
+],
+"id": "neuronId12",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "AVAR",
+"spikeTimes": [14,974,1936,2898,3860,4822,5784]
+},
+{
+"pos": [ 
+ 0.06911200, 
+ -0.00442710 
+],
+"id": "neuronId13",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "AVBL",
+"spikeTimes": [14,963,1925,2887,3849,4811,5773]
+},
+{
+"pos": [ 
+ 0.07176700, 
+ -0.00636840 
+],
+"id": "neuronId14",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "AVBR",
+"spikeTimes": [12,965,1927,2889,3851,4813,5775]
+},
+{
+"pos": [ 
+ 0.06173400, 
+ -0.00147570 
+],
+"id": "neuronId15",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "AVDL",
+"spikeTimes": [18,967,1929,2891,3853,4815,5777]
+},
+{
+"pos": [ 
+ 0.06637800, 
+ -0.00146960 
+],
+"id": "neuronId16",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "AVDR",
+"spikeTimes": [17,966,1928,2890,3852,4814,5776]
+},
+{
+"pos": [ 
+ -0.01224700, 
+ 0.02522900 
+],
+"id": "neuronId17",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "DB01",
+"spikeTimes": []
+},
+{
+"pos": [ 
+ 0.01175700, 
+ 0.02424900 
+],
+"id": "neuronId18",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "DB02",
+"spikeTimes": [992,1954,2916,3878,4840,5802]
+},
+{
+"pos": [ 
+ -0.12057000, 
+ 0.03815400 
+],
+"id": "neuronId19",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "DB03",
+"spikeTimes": [122,926,1888,2850,3812,4774,5736]
+},
+{
+"pos": [ 
+ -0.27318000, 
+ 0.03968000 
+],
+"id": "neuronId20",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "DB04",
+"spikeTimes": [189,850,1138,1812,2100,2774,3062,3736,4024,4698,4986,5660,5948]
+},
+{
+"pos": [ 
+ -0.46853000, 
+ 0.04120600 
+],
+"id": "neuronId21",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "DB05",
+"spikeTimes": [295,754,1253,1716,2215,2678,3177,3640,4139,4602,5101,5564]
+},
+{
+"pos": [ 
+ -0.65777000, 
+ 0.03815400 
+],
+"id": "neuronId22",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "DB06",
+"spikeTimes": [389,661,1348,1623,2310,2585,3272,3547,4234,4509,5196,5471]
+},
+{
+"pos": [ 
+ -0.82718000, 
+ 0.03204900 
+],
+"id": "neuronId23",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "DB07",
+"spikeTimes": [581,1543,2505,3467,4429,5391]
+},
+{
+"pos": [ 
+ -0.94450000, 
+ -0.03786800 
+],
+"id": "neuronId24",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "DVA",
+"spikeTimes": [512,1474,2436,3398,4360,5322]
+},
+{
+"pos": [ 
+ -0.97674000, 
+ -0.04034800 
+],
+"id": "neuronId25",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "PVCL",
+"spikeTimes": [529,1487,2449,3411,4373,5335]
+},
+{
+"pos": [ 
+ -0.98997000, 
+ -0.03042800 
+],
+"id": "neuronId26",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "PVCR",
+"spikeTimes": [536,1496,2458,3420,4382,5344]
+},
+{
+"pos": [ 
+ -0.89573000, 
+ 0.00966560 
+],
+"id": "neuronId27",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "PVPL",
+"spikeTimes": [488,1488,2450,3412,4374,5336]
+},
+{
+"pos": [ 
+ -0.87837000, 
+ 0.01338600 
+],
+"id": "neuronId28",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "PVPR",
+"spikeTimes": [489,1451,2413,3375,4337,5299]
+},
+{
+"pos": [ 
+ 0.00440890, 
+ 0.02449400 
+],
+"id": "neuronId29",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "RIFL",
+"spikeTimes": [37,1037,1999,2961,3923,4885,5847]
+},
+{
+"pos": [ 
+ 0.01665600, 
+ 0.02302400 
+],
+"id": "neuronId30",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "RIFR",
+"spikeTimes": [43,1011,1973,2935,3897,4859,5821]
+},
+{
+"pos": [ 
+ 0.01494100, 
+ 0.02400400 
+],
+"id": "neuronId31",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "VB01",
+"spikeTimes": [37,993,1955,2917,3879,4841,5803]
+},
+{
+"pos": [ 
+ -0.73866000, 
+ 0.03662800 
+],
+"id": "neuronId32",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "VB10",
+"spikeTimes": [655,1613,2575,3537,4499,5461]
+},
+{
+"pos": [ 
+ -0.81802000, 
+ 0.03357500 
+],
+"id": "neuronId33",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "VB11",
+"spikeTimes": [585,1547,2509,3471,4433,5395]
+},
+{
+"pos": [ 
+ 0.02939300, 
+ 0.02351400 
+],
+"id": "neuronId34",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "VB02",
+"spikeTimes": [29,988,1950,2912,3874,4836,5798]
+},
+{
+"pos": [ 
+ -0.08088600, 
+ 0.03662800 
+],
+"id": "neuronId35",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "VB03",
+"spikeTimes": [979,1937,2899,3861,4823,5785]
+},
+{
+"pos": [ 
+ -0.16025000, 
+ 0.03815400 
+],
+"id": "neuronId36",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "VB04",
+"spikeTimes": [940,1898,2860,3822,4784,5746]
+},
+{
+"pos": [ 
+ -0.25182000, 
+ 0.04120600 
+],
+"id": "neuronId37",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "VB05",
+"spikeTimes": [894,1852,2814,3776,4738,5700]
+},
+{
+"pos": [ 
+ -0.36933000, 
+ 0.04273200 
+],
+"id": "neuronId38",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "VB06",
+"spikeTimes": [836,1794,2756,3718,4680,5642]
+},
+{
+"pos": [ 
+ -0.45632000, 
+ 0.04273200 
+],
+"id": "neuronId39",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "VB07",
+"spikeTimes": [806,1766,2728,3690,4652,5614]
+},
+{
+"pos": [ 
+ -0.56315000, 
+ 0.04120600 
+],
+"id": "neuronId40",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "VB08",
+"spikeTimes": [740,1698,2660,3622,4584,5546]
+},
+{
+"pos": [ 
+ -0.63641000, 
+ 0.04120600 
+],
+"id": "neuronId41",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "VB09",
+"spikeTimes": [777,1735,2697,3659,4621,5583]
+},
+{
+"pos": [ 
+ 0.00000000, 
+ 0.00000000 
+],
+"id": "neuronId42",
+"neurotransmitters": "acetycholine",
+"type": "excites",
+"label": "STIM",
+"spikeTimes": []
+}
+],
+"links": [
+{
+"id": "link1",
+"source": { "id": "neuronid6" },
+"target": { "id": "neuronid2" }
+},
+{
+"id": "link2",
+"source": { "id": "neuronid9" },
+"target": { "id": "neuronid2" }
+},
+{
+"id": "link3",
+"source": { "id": "neuronid28" },
+"target": { "id": "neuronid2" }
+},
+{
+"id": "link4",
+"source": { "id": "neuronid7" },
+"target": { "id": "neuronid3" }
+},
+{
+"id": "link5",
+"source": { "id": "neuronid9" },
+"target": { "id": "neuronid3" }
+},
+{
+"id": "link6",
+"source": { "id": "neuronid10" },
+"target": { "id": "neuronid3" }
+},
+{
+"id": "link7",
+"source": { "id": "neuronid8" },
+"target": { "id": "neuronid4" }
+},
+{
+"id": "link8",
+"source": { "id": "neuronid10" },
+"target": { "id": "neuronid4" }
+},
+{
+"id": "link9",
+"source": { "id": "neuronid4" },
+"target": { "id": "neuronid5" }
+},
+{
+"id": "link10",
+"source": { "id": "neuronid7" },
+"target": { "id": "neuronid5" }
+},
+{
+"id": "link11",
+"source": { "id": "neuronid8" },
+"target": { "id": "neuronid5" }
+},
+{
+"id": "link12",
+"source": { "id": "neuronid9" },
+"target": { "id": "neuronid5" }
+},
+{
+"id": "link13",
+"source": { "id": "neuronid10" },
+"target": { "id": "neuronid5" }
+},
+{
+"id": "link14",
+"source": { "id": "neuronid31" },
+"target": { "id": "neuronid5" }
+},
+{
+"id": "link15",
+"source": { "id": "neuronid2" },
+"target": { "id": "neuronid6" }
+},
+{
+"id": "link16",
+"source": { "id": "neuronid9" },
+"target": { "id": "neuronid6" }
+},
+{
+"id": "link17",
+"source": { "id": "neuronid10" },
+"target": { "id": "neuronid6" }
+},
+{
+"id": "link18",
+"source": { "id": "neuronid1" },
+"target": { "id": "neuronid7" }
+},
+{
+"id": "link19",
+"source": { "id": "neuronid3" },
+"target": { "id": "neuronid7" }
+},
+{
+"id": "link20",
+"source": { "id": "neuronid24" },
+"target": { "id": "neuronid7" }
+},
+{
+"id": "link21",
+"source": { "id": "neuronid2" },
+"target": { "id": "neuronid8" }
+},
+{
+"id": "link22",
+"source": { "id": "neuronid4" },
+"target": { "id": "neuronid8" }
+},
+{
+"id": "link23",
+"source": { "id": "neuronid6" },
+"target": { "id": "neuronid8" }
+},
+{
+"id": "link24",
+"source": { "id": "neuronid7" },
+"target": { "id": "neuronid9" }
+},
+{
+"id": "link25",
+"source": { "id": "neuronid3" },
+"target": { "id": "neuronid10" }
+},
+{
+"id": "link26",
+"source": { "id": "neuronid4" },
+"target": { "id": "neuronid10" }
+},
+{
+"id": "link27",
+"source": { "id": "neuronid12" },
+"target": { "id": "neuronid11" }
+},
+{
+"id": "link28",
+"source": { "id": "neuronid13" },
+"target": { "id": "neuronid11" }
+},
+{
+"id": "link29",
+"source": { "id": "neuronid14" },
+"target": { "id": "neuronid11" }
+},
+{
+"id": "link30",
+"source": { "id": "neuronid15" },
+"target": { "id": "neuronid11" }
+},
+{
+"id": "link31",
+"source": { "id": "neuronid16" },
+"target": { "id": "neuronid11" }
+},
+{
+"id": "link32",
+"source": { "id": "neuronid24" },
+"target": { "id": "neuronid11" }
+},
+{
+"id": "link33",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid11" }
+},
+{
+"id": "link34",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid11" }
+},
+{
+"id": "link35",
+"source": { "id": "neuronid27" },
+"target": { "id": "neuronid11" }
+},
+{
+"id": "link36",
+"source": { "id": "neuronid28" },
+"target": { "id": "neuronid11" }
+},
+{
+"id": "link37",
+"source": { "id": "neuronid5" },
+"target": { "id": "neuronid12" }
+},
+{
+"id": "link38",
+"source": { "id": "neuronid11" },
+"target": { "id": "neuronid12" }
+},
+{
+"id": "link39",
+"source": { "id": "neuronid13" },
+"target": { "id": "neuronid12" }
+},
+{
+"id": "link40",
+"source": { "id": "neuronid14" },
+"target": { "id": "neuronid12" }
+},
+{
+"id": "link41",
+"source": { "id": "neuronid15" },
+"target": { "id": "neuronid12" }
+},
+{
+"id": "link42",
+"source": { "id": "neuronid16" },
+"target": { "id": "neuronid12" }
+},
+{
+"id": "link43",
+"source": { "id": "neuronid24" },
+"target": { "id": "neuronid12" }
+},
+{
+"id": "link44",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid12" }
+},
+{
+"id": "link45",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid12" }
+},
+{
+"id": "link46",
+"source": { "id": "neuronid27" },
+"target": { "id": "neuronid12" }
+},
+{
+"id": "link47",
+"source": { "id": "neuronid28" },
+"target": { "id": "neuronid12" }
+},
+{
+"id": "link48",
+"source": { "id": "neuronid12" },
+"target": { "id": "neuronid13" }
+},
+{
+"id": "link49",
+"source": { "id": "neuronid14" },
+"target": { "id": "neuronid13" }
+},
+{
+"id": "link50",
+"source": { "id": "neuronid16" },
+"target": { "id": "neuronid13" }
+},
+{
+"id": "link51",
+"source": { "id": "neuronid24" },
+"target": { "id": "neuronid13" }
+},
+{
+"id": "link52",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid13" }
+},
+{
+"id": "link53",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid13" }
+},
+{
+"id": "link54",
+"source": { "id": "neuronid27" },
+"target": { "id": "neuronid13" }
+},
+{
+"id": "link55",
+"source": { "id": "neuronid28" },
+"target": { "id": "neuronid13" }
+},
+{
+"id": "link56",
+"source": { "id": "neuronid29" },
+"target": { "id": "neuronid13" }
+},
+{
+"id": "link57",
+"source": { "id": "neuronid30" },
+"target": { "id": "neuronid13" }
+},
+{
+"id": "link58",
+"source": { "id": "neuronid5" },
+"target": { "id": "neuronid14" }
+},
+{
+"id": "link59",
+"source": { "id": "neuronid11" },
+"target": { "id": "neuronid14" }
+},
+{
+"id": "link60",
+"source": { "id": "neuronid13" },
+"target": { "id": "neuronid14" }
+},
+{
+"id": "link61",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid14" }
+},
+{
+"id": "link62",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid14" }
+},
+{
+"id": "link63",
+"source": { "id": "neuronid27" },
+"target": { "id": "neuronid14" }
+},
+{
+"id": "link64",
+"source": { "id": "neuronid28" },
+"target": { "id": "neuronid14" }
+},
+{
+"id": "link65",
+"source": { "id": "neuronid29" },
+"target": { "id": "neuronid14" }
+},
+{
+"id": "link66",
+"source": { "id": "neuronid30" },
+"target": { "id": "neuronid14" }
+},
+{
+"id": "link67",
+"source": { "id": "neuronid11" },
+"target": { "id": "neuronid15" }
+},
+{
+"id": "link68",
+"source": { "id": "neuronid12" },
+"target": { "id": "neuronid15" }
+},
+{
+"id": "link69",
+"source": { "id": "neuronid13" },
+"target": { "id": "neuronid15" }
+},
+{
+"id": "link70",
+"source": { "id": "neuronid16" },
+"target": { "id": "neuronid15" }
+},
+{
+"id": "link71",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid15" }
+},
+{
+"id": "link72",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid15" }
+},
+{
+"id": "link73",
+"source": { "id": "neuronid12" },
+"target": { "id": "neuronid16" }
+},
+{
+"id": "link74",
+"source": { "id": "neuronid13" },
+"target": { "id": "neuronid16" }
+},
+{
+"id": "link75",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid16" }
+},
+{
+"id": "link76",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid16" }
+},
+{
+"id": "link77",
+"source": { "id": "neuronid27" },
+"target": { "id": "neuronid16" }
+},
+{
+"id": "link78",
+"source": { "id": "neuronid24" },
+"target": { "id": "neuronid18" }
+},
+{
+"id": "link79",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid18" }
+},
+{
+"id": "link80",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid18" }
+},
+{
+"id": "link81",
+"source": { "id": "neuronid12" },
+"target": { "id": "neuronid19" }
+},
+{
+"id": "link82",
+"source": { "id": "neuronid24" },
+"target": { "id": "neuronid19" }
+},
+{
+"id": "link83",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid19" }
+},
+{
+"id": "link84",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid19" }
+},
+{
+"id": "link85",
+"source": { "id": "neuronid16" },
+"target": { "id": "neuronid20" }
+},
+{
+"id": "link86",
+"source": { "id": "neuronid24" },
+"target": { "id": "neuronid20" }
+},
+{
+"id": "link87",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid20" }
+},
+{
+"id": "link88",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid20" }
+},
+{
+"id": "link89",
+"source": { "id": "neuronid11" },
+"target": { "id": "neuronid21" }
+},
+{
+"id": "link90",
+"source": { "id": "neuronid12" },
+"target": { "id": "neuronid21" }
+},
+{
+"id": "link91",
+"source": { "id": "neuronid24" },
+"target": { "id": "neuronid21" }
+},
+{
+"id": "link92",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid21" }
+},
+{
+"id": "link93",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid21" }
+},
+{
+"id": "link94",
+"source": { "id": "neuronid11" },
+"target": { "id": "neuronid22" }
+},
+{
+"id": "link95",
+"source": { "id": "neuronid12" },
+"target": { "id": "neuronid22" }
+},
+{
+"id": "link96",
+"source": { "id": "neuronid24" },
+"target": { "id": "neuronid22" }
+},
+{
+"id": "link97",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid22" }
+},
+{
+"id": "link98",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid22" }
+},
+{
+"id": "link99",
+"source": { "id": "neuronid24" },
+"target": { "id": "neuronid23" }
+},
+{
+"id": "link100",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid23" }
+},
+{
+"id": "link101",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid23" }
+},
+{
+"id": "link102",
+"source": { "id": "neuronid7" },
+"target": { "id": "neuronid24" }
+},
+{
+"id": "link103",
+"source": { "id": "neuronid8" },
+"target": { "id": "neuronid24" }
+},
+{
+"id": "link104",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid24" }
+},
+{
+"id": "link105",
+"source": { "id": "neuronid31" },
+"target": { "id": "neuronid24" }
+},
+{
+"id": "link106",
+"source": { "id": "neuronid11" },
+"target": { "id": "neuronid25" }
+},
+{
+"id": "link107",
+"source": { "id": "neuronid12" },
+"target": { "id": "neuronid25" }
+},
+{
+"id": "link108",
+"source": { "id": "neuronid15" },
+"target": { "id": "neuronid25" }
+},
+{
+"id": "link109",
+"source": { "id": "neuronid24" },
+"target": { "id": "neuronid25" }
+},
+{
+"id": "link110",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid25" }
+},
+{
+"id": "link111",
+"source": { "id": "neuronid28" },
+"target": { "id": "neuronid25" }
+},
+{
+"id": "link112",
+"source": { "id": "neuronid30" },
+"target": { "id": "neuronid25" }
+},
+{
+"id": "link113",
+"source": { "id": "neuronid11" },
+"target": { "id": "neuronid26" }
+},
+{
+"id": "link114",
+"source": { "id": "neuronid12" },
+"target": { "id": "neuronid26" }
+},
+{
+"id": "link115",
+"source": { "id": "neuronid24" },
+"target": { "id": "neuronid26" }
+},
+{
+"id": "link116",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid26" }
+},
+{
+"id": "link117",
+"source": { "id": "neuronid27" },
+"target": { "id": "neuronid26" }
+},
+{
+"id": "link118",
+"source": { "id": "neuronid28" },
+"target": { "id": "neuronid26" }
+},
+{
+"id": "link119",
+"source": { "id": "neuronid30" },
+"target": { "id": "neuronid26" }
+},
+{
+"id": "link120",
+"source": { "id": "neuronid33" },
+"target": { "id": "neuronid26" }
+},
+{
+"id": "link121",
+"source": { "id": "neuronid29" },
+"target": { "id": "neuronid27" }
+},
+{
+"id": "link122",
+"source": { "id": "neuronid2" },
+"target": { "id": "neuronid28" }
+},
+{
+"id": "link123",
+"source": { "id": "neuronid30" },
+"target": { "id": "neuronid28" }
+},
+{
+"id": "link124",
+"source": { "id": "neuronid3" },
+"target": { "id": "neuronid29" }
+},
+{
+"id": "link125",
+"source": { "id": "neuronid4" },
+"target": { "id": "neuronid30" }
+},
+{
+"id": "link126",
+"source": { "id": "neuronid5" },
+"target": { "id": "neuronid31" }
+},
+{
+"id": "link127",
+"source": { "id": "neuronid24" },
+"target": { "id": "neuronid31" }
+},
+{
+"id": "link128",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid32" }
+},
+{
+"id": "link129",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid32" }
+},
+{
+"id": "link130",
+"source": { "id": "neuronid24" },
+"target": { "id": "neuronid33" }
+},
+{
+"id": "link131",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid33" }
+},
+{
+"id": "link132",
+"source": { "id": "neuronid7" },
+"target": { "id": "neuronid34" }
+},
+{
+"id": "link133",
+"source": { "id": "neuronid13" },
+"target": { "id": "neuronid34" }
+},
+{
+"id": "link134",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid35" }
+},
+{
+"id": "link135",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid36" }
+},
+{
+"id": "link136",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid36" }
+},
+{
+"id": "link137",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid37" }
+},
+{
+"id": "link138",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid38" }
+},
+{
+"id": "link139",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid38" }
+},
+{
+"id": "link140",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid39" }
+},
+{
+"id": "link141",
+"source": { "id": "neuronid38" },
+"target": { "id": "neuronid39" }
+},
+{
+"id": "link142",
+"source": { "id": "neuronid25" },
+"target": { "id": "neuronid40" }
+},
+{
+"id": "link143",
+"source": { "id": "neuronid26" },
+"target": { "id": "neuronid40" }
+},
+{
+"id": "link144",
+"source": { "id": "neuronid41" },
+"target": { "id": "neuronid40" }
+},
+{
+"id": "link145",
+"source": { "id": "neuronid40" },
+"target": { "id": "neuronid41" }
+}
+],
+"propagations": [
+{
+"source": { "id": "neuronid42", "activationTime": "0" },
+"target": { "id": "neuronid9", "activationTime": "0" }
+},
+{
+"source": { "id": "neuronid9", "activationTime": "0" },
+"target": { "id": "neuronid3", "activationTime": "5" }
+},
+{
+"source": { "id": "neuronid9", "activationTime": "0" },
+"target": { "id": "neuronid5", "activationTime": "5" }
+},
+{
+"source": { "id": "neuronid9", "activationTime": "0" },
+"target": { "id": "neuronid2", "activationTime": "8" }
+},
+{
+"source": { "id": "neuronid3", "activationTime": "5" },
+"target": { "id": "neuronid10", "activationTime": "12" }
+},
+{
+"source": { "id": "neuronid5", "activationTime": "5" },
+"target": { "id": "neuronid14", "activationTime": "12" }
+},
+{
+"source": { "id": "neuronid3", "activationTime": "5" },
+"target": { "id": "neuronid7", "activationTime": "14" }
+},
+{
+"source": { "id": "neuronid5", "activationTime": "5" },
+"target": { "id": "neuronid12", "activationTime": "14" }
+},
+{
+"source": { "id": "neuronid14", "activationTime": "12" },
+"target": { "id": "neuronid13", "activationTime": "14" }
+},
+{
+"source": { "id": "neuronid12", "activationTime": "14" },
+"target": { "id": "neuronid11", "activationTime": "16" }
+},
+{
+"source": { "id": "neuronid9", "activationTime": "0" },
+"target": { "id": "neuronid6", "activationTime": "17" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "14" },
+"target": { "id": "neuronid16", "activationTime": "17" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "14" },
+"target": { "id": "neuronid15", "activationTime": "18" }
+},
+{
+"source": { "id": "neuronid10", "activationTime": "12" },
+"target": { "id": "neuronid4", "activationTime": "21" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "8" },
+"target": { "id": "neuronid8", "activationTime": "22" }
+},
+{
+"source": { "id": "neuronid7", "activationTime": "14" },
+"target": { "id": "neuronid34", "activationTime": "29" }
+},
+{
+"source": { "id": "neuronid3", "activationTime": "5" },
+"target": { "id": "neuronid29", "activationTime": "37" }
+},
+{
+"source": { "id": "neuronid5", "activationTime": "5" },
+"target": { "id": "neuronid31", "activationTime": "37" }
+},
+{
+"source": { "id": "neuronid4", "activationTime": "21" },
+"target": { "id": "neuronid30", "activationTime": "43" }
+},
+{
+"source": { "id": "neuronid12", "activationTime": "14" },
+"target": { "id": "neuronid19", "activationTime": "122" }
+},
+{
+"source": { "id": "neuronid16", "activationTime": "17" },
+"target": { "id": "neuronid20", "activationTime": "189" }
+},
+{
+"source": { "id": "neuronid12", "activationTime": "14" },
+"target": { "id": "neuronid21", "activationTime": "295" }
+},
+{
+"source": { "id": "neuronid12", "activationTime": "14" },
+"target": { "id": "neuronid22", "activationTime": "389" }
+},
+{
+"source": { "id": "neuronid29", "activationTime": "37" },
+"target": { "id": "neuronid27", "activationTime": "488" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "8" },
+"target": { "id": "neuronid28", "activationTime": "489" }
+},
+{
+"source": { "id": "neuronid7", "activationTime": "14" },
+"target": { "id": "neuronid24", "activationTime": "512" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "512" },
+"target": { "id": "neuronid25", "activationTime": "529" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "512" },
+"target": { "id": "neuronid26", "activationTime": "536" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "512" },
+"target": { "id": "neuronid23", "activationTime": "581" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "512" },
+"target": { "id": "neuronid33", "activationTime": "585" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "529" },
+"target": { "id": "neuronid32", "activationTime": "655" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "512" },
+"target": { "id": "neuronid22", "activationTime": "661" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "529" },
+"target": { "id": "neuronid40", "activationTime": "740" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "512" },
+"target": { "id": "neuronid21", "activationTime": "754" }
+},
+{
+"source": { "id": "neuronid40", "activationTime": "740" },
+"target": { "id": "neuronid41", "activationTime": "777" }
+},
+{
+"source": { "id": "neuronid26", "activationTime": "536" },
+"target": { "id": "neuronid39", "activationTime": "806" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "529" },
+"target": { "id": "neuronid38", "activationTime": "836" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "512" },
+"target": { "id": "neuronid20", "activationTime": "850" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "529" },
+"target": { "id": "neuronid37", "activationTime": "894" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "512" },
+"target": { "id": "neuronid19", "activationTime": "926" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "529" },
+"target": { "id": "neuronid36", "activationTime": "940" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "489" },
+"target": { "id": "neuronid13", "activationTime": "963" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "963" },
+"target": { "id": "neuronid14", "activationTime": "965" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "489" },
+"target": { "id": "neuronid14", "activationTime": "965" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "963" },
+"target": { "id": "neuronid16", "activationTime": "966" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "963" },
+"target": { "id": "neuronid15", "activationTime": "967" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "489" },
+"target": { "id": "neuronid2", "activationTime": "970" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "489" },
+"target": { "id": "neuronid11", "activationTime": "973" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "489" },
+"target": { "id": "neuronid12", "activationTime": "974" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "529" },
+"target": { "id": "neuronid35", "activationTime": "979" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "970" },
+"target": { "id": "neuronid8", "activationTime": "984" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "963" },
+"target": { "id": "neuronid34", "activationTime": "988" }
+},
+{
+"source": { "id": "neuronid8", "activationTime": "984" },
+"target": { "id": "neuronid4", "activationTime": "989" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "512" },
+"target": { "id": "neuronid18", "activationTime": "992" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "512" },
+"target": { "id": "neuronid31", "activationTime": "993" }
+},
+{
+"source": { "id": "neuronid8", "activationTime": "984" },
+"target": { "id": "neuronid5", "activationTime": "994" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "970" },
+"target": { "id": "neuronid6", "activationTime": "994" }
+},
+{
+"source": { "id": "neuronid4", "activationTime": "989" },
+"target": { "id": "neuronid10", "activationTime": "998" }
+},
+{
+"source": { "id": "neuronid10", "activationTime": "998" },
+"target": { "id": "neuronid3", "activationTime": "1005" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "512" },
+"target": { "id": "neuronid7", "activationTime": "1010" }
+},
+{
+"source": { "id": "neuronid4", "activationTime": "989" },
+"target": { "id": "neuronid30", "activationTime": "1011" }
+},
+{
+"source": { "id": "neuronid7", "activationTime": "1010" },
+"target": { "id": "neuronid9", "activationTime": "1021" }
+},
+{
+"source": { "id": "neuronid3", "activationTime": "1005" },
+"target": { "id": "neuronid29", "activationTime": "1037" }
+},
+{
+"source": { "id": "neuronid16", "activationTime": "966" },
+"target": { "id": "neuronid20", "activationTime": "1138" }
+},
+{
+"source": { "id": "neuronid11", "activationTime": "973" },
+"target": { "id": "neuronid21", "activationTime": "1253" }
+},
+{
+"source": { "id": "neuronid11", "activationTime": "973" },
+"target": { "id": "neuronid22", "activationTime": "1348" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "970" },
+"target": { "id": "neuronid28", "activationTime": "1451" }
+},
+{
+"source": { "id": "neuronid31", "activationTime": "993" },
+"target": { "id": "neuronid24", "activationTime": "1474" }
+},
+{
+"source": { "id": "neuronid15", "activationTime": "967" },
+"target": { "id": "neuronid25", "activationTime": "1487" }
+},
+{
+"source": { "id": "neuronid29", "activationTime": "1037" },
+"target": { "id": "neuronid27", "activationTime": "1488" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "1487" },
+"target": { "id": "neuronid26", "activationTime": "1496" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "1474" },
+"target": { "id": "neuronid23", "activationTime": "1543" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "1474" },
+"target": { "id": "neuronid33", "activationTime": "1547" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "1487" },
+"target": { "id": "neuronid32", "activationTime": "1613" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "1474" },
+"target": { "id": "neuronid22", "activationTime": "1623" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "1487" },
+"target": { "id": "neuronid40", "activationTime": "1698" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "1474" },
+"target": { "id": "neuronid21", "activationTime": "1716" }
+},
+{
+"source": { "id": "neuronid40", "activationTime": "1698" },
+"target": { "id": "neuronid41", "activationTime": "1735" }
+},
+{
+"source": { "id": "neuronid26", "activationTime": "1496" },
+"target": { "id": "neuronid39", "activationTime": "1766" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "1487" },
+"target": { "id": "neuronid38", "activationTime": "1794" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "1474" },
+"target": { "id": "neuronid20", "activationTime": "1812" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "1487" },
+"target": { "id": "neuronid37", "activationTime": "1852" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "1474" },
+"target": { "id": "neuronid19", "activationTime": "1888" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "1487" },
+"target": { "id": "neuronid36", "activationTime": "1898" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "1451" },
+"target": { "id": "neuronid13", "activationTime": "1925" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "1925" },
+"target": { "id": "neuronid14", "activationTime": "1927" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "1451" },
+"target": { "id": "neuronid14", "activationTime": "1927" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "1925" },
+"target": { "id": "neuronid16", "activationTime": "1928" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "1925" },
+"target": { "id": "neuronid15", "activationTime": "1929" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "1451" },
+"target": { "id": "neuronid2", "activationTime": "1932" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "1451" },
+"target": { "id": "neuronid11", "activationTime": "1935" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "1451" },
+"target": { "id": "neuronid12", "activationTime": "1936" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "1487" },
+"target": { "id": "neuronid35", "activationTime": "1937" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "1932" },
+"target": { "id": "neuronid8", "activationTime": "1946" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "1925" },
+"target": { "id": "neuronid34", "activationTime": "1950" }
+},
+{
+"source": { "id": "neuronid8", "activationTime": "1946" },
+"target": { "id": "neuronid4", "activationTime": "1951" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "1474" },
+"target": { "id": "neuronid18", "activationTime": "1954" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "1474" },
+"target": { "id": "neuronid31", "activationTime": "1955" }
+},
+{
+"source": { "id": "neuronid8", "activationTime": "1946" },
+"target": { "id": "neuronid5", "activationTime": "1956" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "1932" },
+"target": { "id": "neuronid6", "activationTime": "1956" }
+},
+{
+"source": { "id": "neuronid4", "activationTime": "1951" },
+"target": { "id": "neuronid10", "activationTime": "1960" }
+},
+{
+"source": { "id": "neuronid10", "activationTime": "1960" },
+"target": { "id": "neuronid3", "activationTime": "1967" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "1474" },
+"target": { "id": "neuronid7", "activationTime": "1972" }
+},
+{
+"source": { "id": "neuronid4", "activationTime": "1951" },
+"target": { "id": "neuronid30", "activationTime": "1973" }
+},
+{
+"source": { "id": "neuronid7", "activationTime": "1972" },
+"target": { "id": "neuronid9", "activationTime": "1983" }
+},
+{
+"source": { "id": "neuronid3", "activationTime": "1967" },
+"target": { "id": "neuronid29", "activationTime": "1999" }
+},
+{
+"source": { "id": "neuronid16", "activationTime": "1928" },
+"target": { "id": "neuronid20", "activationTime": "2100" }
+},
+{
+"source": { "id": "neuronid11", "activationTime": "1935" },
+"target": { "id": "neuronid21", "activationTime": "2215" }
+},
+{
+"source": { "id": "neuronid11", "activationTime": "1935" },
+"target": { "id": "neuronid22", "activationTime": "2310" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "1932" },
+"target": { "id": "neuronid28", "activationTime": "2413" }
+},
+{
+"source": { "id": "neuronid31", "activationTime": "1955" },
+"target": { "id": "neuronid24", "activationTime": "2436" }
+},
+{
+"source": { "id": "neuronid15", "activationTime": "1929" },
+"target": { "id": "neuronid25", "activationTime": "2449" }
+},
+{
+"source": { "id": "neuronid29", "activationTime": "1999" },
+"target": { "id": "neuronid27", "activationTime": "2450" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "2449" },
+"target": { "id": "neuronid26", "activationTime": "2458" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "2436" },
+"target": { "id": "neuronid23", "activationTime": "2505" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "2436" },
+"target": { "id": "neuronid33", "activationTime": "2509" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "2449" },
+"target": { "id": "neuronid32", "activationTime": "2575" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "2436" },
+"target": { "id": "neuronid22", "activationTime": "2585" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "2449" },
+"target": { "id": "neuronid40", "activationTime": "2660" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "2436" },
+"target": { "id": "neuronid21", "activationTime": "2678" }
+},
+{
+"source": { "id": "neuronid40", "activationTime": "2660" },
+"target": { "id": "neuronid41", "activationTime": "2697" }
+},
+{
+"source": { "id": "neuronid26", "activationTime": "2458" },
+"target": { "id": "neuronid39", "activationTime": "2728" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "2449" },
+"target": { "id": "neuronid38", "activationTime": "2756" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "2436" },
+"target": { "id": "neuronid20", "activationTime": "2774" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "2449" },
+"target": { "id": "neuronid37", "activationTime": "2814" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "2436" },
+"target": { "id": "neuronid19", "activationTime": "2850" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "2449" },
+"target": { "id": "neuronid36", "activationTime": "2860" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "2413" },
+"target": { "id": "neuronid13", "activationTime": "2887" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "2887" },
+"target": { "id": "neuronid14", "activationTime": "2889" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "2413" },
+"target": { "id": "neuronid14", "activationTime": "2889" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "2887" },
+"target": { "id": "neuronid16", "activationTime": "2890" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "2887" },
+"target": { "id": "neuronid15", "activationTime": "2891" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "2413" },
+"target": { "id": "neuronid2", "activationTime": "2894" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "2413" },
+"target": { "id": "neuronid11", "activationTime": "2897" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "2413" },
+"target": { "id": "neuronid12", "activationTime": "2898" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "2449" },
+"target": { "id": "neuronid35", "activationTime": "2899" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "2894" },
+"target": { "id": "neuronid8", "activationTime": "2908" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "2887" },
+"target": { "id": "neuronid34", "activationTime": "2912" }
+},
+{
+"source": { "id": "neuronid8", "activationTime": "2908" },
+"target": { "id": "neuronid4", "activationTime": "2913" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "2436" },
+"target": { "id": "neuronid18", "activationTime": "2916" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "2436" },
+"target": { "id": "neuronid31", "activationTime": "2917" }
+},
+{
+"source": { "id": "neuronid8", "activationTime": "2908" },
+"target": { "id": "neuronid5", "activationTime": "2918" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "2894" },
+"target": { "id": "neuronid6", "activationTime": "2918" }
+},
+{
+"source": { "id": "neuronid4", "activationTime": "2913" },
+"target": { "id": "neuronid10", "activationTime": "2922" }
+},
+{
+"source": { "id": "neuronid10", "activationTime": "2922" },
+"target": { "id": "neuronid3", "activationTime": "2929" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "2436" },
+"target": { "id": "neuronid7", "activationTime": "2934" }
+},
+{
+"source": { "id": "neuronid4", "activationTime": "2913" },
+"target": { "id": "neuronid30", "activationTime": "2935" }
+},
+{
+"source": { "id": "neuronid7", "activationTime": "2934" },
+"target": { "id": "neuronid9", "activationTime": "2945" }
+},
+{
+"source": { "id": "neuronid3", "activationTime": "2929" },
+"target": { "id": "neuronid29", "activationTime": "2961" }
+},
+{
+"source": { "id": "neuronid16", "activationTime": "2890" },
+"target": { "id": "neuronid20", "activationTime": "3062" }
+},
+{
+"source": { "id": "neuronid11", "activationTime": "2897" },
+"target": { "id": "neuronid21", "activationTime": "3177" }
+},
+{
+"source": { "id": "neuronid11", "activationTime": "2897" },
+"target": { "id": "neuronid22", "activationTime": "3272" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "2894" },
+"target": { "id": "neuronid28", "activationTime": "3375" }
+},
+{
+"source": { "id": "neuronid31", "activationTime": "2917" },
+"target": { "id": "neuronid24", "activationTime": "3398" }
+},
+{
+"source": { "id": "neuronid15", "activationTime": "2891" },
+"target": { "id": "neuronid25", "activationTime": "3411" }
+},
+{
+"source": { "id": "neuronid29", "activationTime": "2961" },
+"target": { "id": "neuronid27", "activationTime": "3412" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "3411" },
+"target": { "id": "neuronid26", "activationTime": "3420" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "3398" },
+"target": { "id": "neuronid23", "activationTime": "3467" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "3398" },
+"target": { "id": "neuronid33", "activationTime": "3471" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "3411" },
+"target": { "id": "neuronid32", "activationTime": "3537" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "3398" },
+"target": { "id": "neuronid22", "activationTime": "3547" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "3411" },
+"target": { "id": "neuronid40", "activationTime": "3622" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "3398" },
+"target": { "id": "neuronid21", "activationTime": "3640" }
+},
+{
+"source": { "id": "neuronid40", "activationTime": "3622" },
+"target": { "id": "neuronid41", "activationTime": "3659" }
+},
+{
+"source": { "id": "neuronid26", "activationTime": "3420" },
+"target": { "id": "neuronid39", "activationTime": "3690" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "3411" },
+"target": { "id": "neuronid38", "activationTime": "3718" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "3398" },
+"target": { "id": "neuronid20", "activationTime": "3736" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "3411" },
+"target": { "id": "neuronid37", "activationTime": "3776" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "3398" },
+"target": { "id": "neuronid19", "activationTime": "3812" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "3411" },
+"target": { "id": "neuronid36", "activationTime": "3822" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "3375" },
+"target": { "id": "neuronid13", "activationTime": "3849" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "3849" },
+"target": { "id": "neuronid14", "activationTime": "3851" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "3375" },
+"target": { "id": "neuronid14", "activationTime": "3851" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "3849" },
+"target": { "id": "neuronid16", "activationTime": "3852" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "3849" },
+"target": { "id": "neuronid15", "activationTime": "3853" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "3375" },
+"target": { "id": "neuronid2", "activationTime": "3856" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "3375" },
+"target": { "id": "neuronid11", "activationTime": "3859" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "3375" },
+"target": { "id": "neuronid12", "activationTime": "3860" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "3411" },
+"target": { "id": "neuronid35", "activationTime": "3861" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "3856" },
+"target": { "id": "neuronid8", "activationTime": "3870" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "3849" },
+"target": { "id": "neuronid34", "activationTime": "3874" }
+},
+{
+"source": { "id": "neuronid8", "activationTime": "3870" },
+"target": { "id": "neuronid4", "activationTime": "3875" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "3398" },
+"target": { "id": "neuronid18", "activationTime": "3878" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "3398" },
+"target": { "id": "neuronid31", "activationTime": "3879" }
+},
+{
+"source": { "id": "neuronid8", "activationTime": "3870" },
+"target": { "id": "neuronid5", "activationTime": "3880" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "3856" },
+"target": { "id": "neuronid6", "activationTime": "3880" }
+},
+{
+"source": { "id": "neuronid4", "activationTime": "3875" },
+"target": { "id": "neuronid10", "activationTime": "3884" }
+},
+{
+"source": { "id": "neuronid10", "activationTime": "3884" },
+"target": { "id": "neuronid3", "activationTime": "3891" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "3398" },
+"target": { "id": "neuronid7", "activationTime": "3896" }
+},
+{
+"source": { "id": "neuronid4", "activationTime": "3875" },
+"target": { "id": "neuronid30", "activationTime": "3897" }
+},
+{
+"source": { "id": "neuronid7", "activationTime": "3896" },
+"target": { "id": "neuronid9", "activationTime": "3907" }
+},
+{
+"source": { "id": "neuronid3", "activationTime": "3891" },
+"target": { "id": "neuronid29", "activationTime": "3923" }
+},
+{
+"source": { "id": "neuronid16", "activationTime": "3852" },
+"target": { "id": "neuronid20", "activationTime": "4024" }
+},
+{
+"source": { "id": "neuronid11", "activationTime": "3859" },
+"target": { "id": "neuronid21", "activationTime": "4139" }
+},
+{
+"source": { "id": "neuronid11", "activationTime": "3859" },
+"target": { "id": "neuronid22", "activationTime": "4234" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "3856" },
+"target": { "id": "neuronid28", "activationTime": "4337" }
+},
+{
+"source": { "id": "neuronid31", "activationTime": "3879" },
+"target": { "id": "neuronid24", "activationTime": "4360" }
+},
+{
+"source": { "id": "neuronid15", "activationTime": "3853" },
+"target": { "id": "neuronid25", "activationTime": "4373" }
+},
+{
+"source": { "id": "neuronid29", "activationTime": "3923" },
+"target": { "id": "neuronid27", "activationTime": "4374" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "4373" },
+"target": { "id": "neuronid26", "activationTime": "4382" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "4360" },
+"target": { "id": "neuronid23", "activationTime": "4429" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "4360" },
+"target": { "id": "neuronid33", "activationTime": "4433" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "4373" },
+"target": { "id": "neuronid32", "activationTime": "4499" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "4360" },
+"target": { "id": "neuronid22", "activationTime": "4509" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "4373" },
+"target": { "id": "neuronid40", "activationTime": "4584" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "4360" },
+"target": { "id": "neuronid21", "activationTime": "4602" }
+},
+{
+"source": { "id": "neuronid40", "activationTime": "4584" },
+"target": { "id": "neuronid41", "activationTime": "4621" }
+},
+{
+"source": { "id": "neuronid26", "activationTime": "4382" },
+"target": { "id": "neuronid39", "activationTime": "4652" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "4373" },
+"target": { "id": "neuronid38", "activationTime": "4680" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "4360" },
+"target": { "id": "neuronid20", "activationTime": "4698" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "4373" },
+"target": { "id": "neuronid37", "activationTime": "4738" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "4360" },
+"target": { "id": "neuronid19", "activationTime": "4774" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "4373" },
+"target": { "id": "neuronid36", "activationTime": "4784" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "4337" },
+"target": { "id": "neuronid13", "activationTime": "4811" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "4811" },
+"target": { "id": "neuronid14", "activationTime": "4813" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "4337" },
+"target": { "id": "neuronid14", "activationTime": "4813" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "4811" },
+"target": { "id": "neuronid16", "activationTime": "4814" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "4811" },
+"target": { "id": "neuronid15", "activationTime": "4815" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "4337" },
+"target": { "id": "neuronid2", "activationTime": "4818" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "4337" },
+"target": { "id": "neuronid11", "activationTime": "4821" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "4337" },
+"target": { "id": "neuronid12", "activationTime": "4822" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "4373" },
+"target": { "id": "neuronid35", "activationTime": "4823" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "4818" },
+"target": { "id": "neuronid8", "activationTime": "4832" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "4811" },
+"target": { "id": "neuronid34", "activationTime": "4836" }
+},
+{
+"source": { "id": "neuronid8", "activationTime": "4832" },
+"target": { "id": "neuronid4", "activationTime": "4837" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "4360" },
+"target": { "id": "neuronid18", "activationTime": "4840" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "4360" },
+"target": { "id": "neuronid31", "activationTime": "4841" }
+},
+{
+"source": { "id": "neuronid8", "activationTime": "4832" },
+"target": { "id": "neuronid5", "activationTime": "4842" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "4818" },
+"target": { "id": "neuronid6", "activationTime": "4842" }
+},
+{
+"source": { "id": "neuronid4", "activationTime": "4837" },
+"target": { "id": "neuronid10", "activationTime": "4846" }
+},
+{
+"source": { "id": "neuronid10", "activationTime": "4846" },
+"target": { "id": "neuronid3", "activationTime": "4853" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "4360" },
+"target": { "id": "neuronid7", "activationTime": "4858" }
+},
+{
+"source": { "id": "neuronid4", "activationTime": "4837" },
+"target": { "id": "neuronid30", "activationTime": "4859" }
+},
+{
+"source": { "id": "neuronid7", "activationTime": "4858" },
+"target": { "id": "neuronid9", "activationTime": "4869" }
+},
+{
+"source": { "id": "neuronid3", "activationTime": "4853" },
+"target": { "id": "neuronid29", "activationTime": "4885" }
+},
+{
+"source": { "id": "neuronid16", "activationTime": "4814" },
+"target": { "id": "neuronid20", "activationTime": "4986" }
+},
+{
+"source": { "id": "neuronid11", "activationTime": "4821" },
+"target": { "id": "neuronid21", "activationTime": "5101" }
+},
+{
+"source": { "id": "neuronid11", "activationTime": "4821" },
+"target": { "id": "neuronid22", "activationTime": "5196" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "4818" },
+"target": { "id": "neuronid28", "activationTime": "5299" }
+},
+{
+"source": { "id": "neuronid31", "activationTime": "4841" },
+"target": { "id": "neuronid24", "activationTime": "5322" }
+},
+{
+"source": { "id": "neuronid15", "activationTime": "4815" },
+"target": { "id": "neuronid25", "activationTime": "5335" }
+},
+{
+"source": { "id": "neuronid29", "activationTime": "4885" },
+"target": { "id": "neuronid27", "activationTime": "5336" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "5335" },
+"target": { "id": "neuronid26", "activationTime": "5344" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "5322" },
+"target": { "id": "neuronid23", "activationTime": "5391" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "5322" },
+"target": { "id": "neuronid33", "activationTime": "5395" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "5335" },
+"target": { "id": "neuronid32", "activationTime": "5461" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "5322" },
+"target": { "id": "neuronid22", "activationTime": "5471" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "5335" },
+"target": { "id": "neuronid40", "activationTime": "5546" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "5322" },
+"target": { "id": "neuronid21", "activationTime": "5564" }
+},
+{
+"source": { "id": "neuronid40", "activationTime": "5546" },
+"target": { "id": "neuronid41", "activationTime": "5583" }
+},
+{
+"source": { "id": "neuronid26", "activationTime": "5344" },
+"target": { "id": "neuronid39", "activationTime": "5614" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "5335" },
+"target": { "id": "neuronid38", "activationTime": "5642" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "5322" },
+"target": { "id": "neuronid20", "activationTime": "5660" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "5335" },
+"target": { "id": "neuronid37", "activationTime": "5700" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "5322" },
+"target": { "id": "neuronid19", "activationTime": "5736" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "5335" },
+"target": { "id": "neuronid36", "activationTime": "5746" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "5299" },
+"target": { "id": "neuronid13", "activationTime": "5773" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "5773" },
+"target": { "id": "neuronid14", "activationTime": "5775" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "5299" },
+"target": { "id": "neuronid14", "activationTime": "5775" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "5773" },
+"target": { "id": "neuronid16", "activationTime": "5776" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "5773" },
+"target": { "id": "neuronid15", "activationTime": "5777" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "5299" },
+"target": { "id": "neuronid2", "activationTime": "5780" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "5299" },
+"target": { "id": "neuronid11", "activationTime": "5783" }
+},
+{
+"source": { "id": "neuronid28", "activationTime": "5299" },
+"target": { "id": "neuronid12", "activationTime": "5784" }
+},
+{
+"source": { "id": "neuronid25", "activationTime": "5335" },
+"target": { "id": "neuronid35", "activationTime": "5785" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "5780" },
+"target": { "id": "neuronid8", "activationTime": "5794" }
+},
+{
+"source": { "id": "neuronid13", "activationTime": "5773" },
+"target": { "id": "neuronid34", "activationTime": "5798" }
+},
+{
+"source": { "id": "neuronid8", "activationTime": "5794" },
+"target": { "id": "neuronid4", "activationTime": "5799" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "5322" },
+"target": { "id": "neuronid18", "activationTime": "5802" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "5322" },
+"target": { "id": "neuronid31", "activationTime": "5803" }
+},
+{
+"source": { "id": "neuronid8", "activationTime": "5794" },
+"target": { "id": "neuronid5", "activationTime": "5804" }
+},
+{
+"source": { "id": "neuronid2", "activationTime": "5780" },
+"target": { "id": "neuronid6", "activationTime": "5804" }
+},
+{
+"source": { "id": "neuronid4", "activationTime": "5799" },
+"target": { "id": "neuronid10", "activationTime": "5808" }
+},
+{
+"source": { "id": "neuronid10", "activationTime": "5808" },
+"target": { "id": "neuronid3", "activationTime": "5815" }
+},
+{
+"source": { "id": "neuronid24", "activationTime": "5322" },
+"target": { "id": "neuronid7", "activationTime": "5820" }
+},
+{
+"source": { "id": "neuronid4", "activationTime": "5799" },
+"target": { "id": "neuronid30", "activationTime": "5821" }
+},
+{
+"source": { "id": "neuronid7", "activationTime": "5820" },
+"target": { "id": "neuronid9", "activationTime": "5831" }
+},
+{
+"source": { "id": "neuronid3", "activationTime": "5815" },
+"target": { "id": "neuronid29", "activationTime": "5847" }
+},
+{
+"source": { "id": "neuronid16", "activationTime": "5776" },
+"target": { "id": "neuronid20", "activationTime": "5948" }
+}
+]
+}
