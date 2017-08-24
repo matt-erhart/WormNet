@@ -41,6 +41,7 @@ export interface propagation {
   source: { id: neuronId; activationTime: number };
   target: { id: neuronId; activationTime: number };
   pos?: {current: number[], source: number[]}
+  type?: "excites" | "inhibits" | string; //used for neuron color
 }
 
 export interface jsonOutput {

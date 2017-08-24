@@ -121,8 +121,9 @@ export class App extends React.Component<any, any> {
     this.timer = d3.interval(elapsed => {
       //save to this.timer so we can use this.timer.stop()
       if (this.state.time < 6000)
-        this.setState({ time: this.state.time + 1 }); //increment time this way so react will rerender on change
-      this.activationLocations(this.state.propagation, this.state.time);
+        this.setTime(this.state.time+1)
+      //   this.setState({ time: this.state.time + 1 }); //increment time this way so react will rerender on change
+      // this.activationLocations(this.state.propagation, this.state.time);
     }, 10);
   };
 
@@ -171,6 +172,7 @@ export class App extends React.Component<any, any> {
       );
       const pos = d3.interpolateObject(source.posScaled, target.posScaled)(progress);
       propagationsOnScreen[i].pos = {current: pos, source: source.posScaled}
+      propagationsOnScreen[i].type = source.type;
     });
 
     this.setState({ propagationsOnScreen });
@@ -185,6 +187,7 @@ export class App extends React.Component<any, any> {
       time,
       propagationsOnScreen
     } = this.state;
+    
     if (!svgWidth || !svgHeight) return <div>loading</div>;
     const nTimes = 6000; //data[0].spikes.length;
     //render is a react specific function from React.Component.
@@ -222,7 +225,7 @@ export class App extends React.Component<any, any> {
                   cx={p.pos.current[0]}
                   cy={p.pos.current[1]}
                   r={2} // this ? : business is called a ternary operator. means if isspiking is true return 20 else return 5
-                  fill='white'
+                  fill={p.type === 'excites' ? colors.excitesInActive : colors.inhibitsInActive}
                 />
               )
             })}
@@ -234,7 +237,7 @@ export class App extends React.Component<any, any> {
                   y1={p.pos.current[1]}
                   x2={p.pos.source[0]}
                   y2={p.pos.source[1]}
-                  stroke='white'
+                  stroke={p.type === 'excites' ? colors.excitesInActive : colors.inhibitsInActive}
                   strokeWidth={1}
                 />
               )
@@ -242,7 +245,8 @@ export class App extends React.Component<any, any> {
             {neurons.map((neuron, i) => {
               //note this pos.map begings and ends with {}
               //.map is how we loop over arrays. in this case, we return a circle for each posisiton.
-              const isSpiking = _.includes(neuron.spikes, this.state.time); //data has all the cells, each with {label, spikes, pos} fields
+              const isSpiking = _.includes(neuron.spikeTimes, this.state.time); //data has all the cells, each with {label, spikes, pos} fields
+              
               const activeColor =
                 neuron.type === "excites"
                   ? colors.excitesActive
