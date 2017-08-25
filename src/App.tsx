@@ -15,7 +15,13 @@ import {
 } from "./constants";
 import { Controls } from "./Controls";
 import { Upload } from "./Upload";
-import {Files} from "./Files"
+import { Files } from "./Files";
+
+import Drawer from "material-ui/Drawer";
+import IconButton from "material-ui/IconButton";
+import NavigationMenu from "material-ui/svg-icons/navigation/menu";
+import ChevronRight from "material-ui/svg-icons/navigation/chevron-right";
+import ChevronLeft from "material-ui/svg-icons/navigation/chevron-left";
 
 const plotSetup = (neurons, svgWidth = 1000, svgHeight = 1000) => {
   const xs: number[] = neurons.map(row => +row.pos[0]); //create an array of x positions
@@ -56,7 +62,8 @@ export class App extends React.Component<any, any> {
       links: [],
       propagations: [],
       propagationsOnScreen: [],
-      fileName: ''
+      fileName: "",
+      open: true
     };
   }
   getSourceAndTargetNeurons(neurons, sourceId, targetId) {
@@ -77,16 +84,12 @@ export class App extends React.Component<any, any> {
     const dataDir = "../assets/data";
   }
 
-  prepareData = (json) => {
+  prepareData = json => {
     let neuronData: neuron[] = json.neurons;
     const links: link[] = json.links;
     const propagations: propagation[] = json.propagations;
     this.setState({ propagations });
-    const { neurons, ...plotMeta } = plotSetup(
-      neuronData,
-      svgWidth,
-      svgHeight
-    );
+    const { neurons, ...plotMeta } = plotSetup(neuronData, svgWidth, svgHeight);
     this.setState({ neurons });
 
     this.setState({ plotMeta });
@@ -103,7 +106,7 @@ export class App extends React.Component<any, any> {
       return { sx, sy, tx, ty, id: link.id };
     });
     this.setState({ links: scaledLinks });
-  }
+  };
   componentDidUpdate() {
     store.set("time", this.state.time);
   }
@@ -171,6 +174,7 @@ export class App extends React.Component<any, any> {
 
     this.setState({ propagationsOnScreen });
   }
+  handleToggle = () => this.setState({ open: !this.state.open });
 
   render() {
     const { svgWidth, svgHeight } = this.state.plotMeta;
@@ -182,7 +186,13 @@ export class App extends React.Component<any, any> {
       propagationsOnScreen
     } = this.state;
 
-    if (!svgWidth || !svgHeight) return <div><Upload /><Files prepareData={this.prepareData}/></div>;
+    if (!svgWidth || !svgHeight)
+      return (
+        <div>
+          <Upload />
+          <Files prepareData={this.prepareData} />
+        </div>
+      );
     const nTimes = 6000; //data[0].spikes.length;
     //render is a react specific function from React.Component.
 
@@ -190,8 +200,33 @@ export class App extends React.Component<any, any> {
       // the parens after return are important. also need to wrap all this html-like code in one element. a div in this case, as usual.
       //the bellow code is jsx which is html tags that work in js. if you want to use variables, functions, or standard js from above put it in {}
       <div>
-        <Upload />
-        <Files prepareData={this.prepareData}/>
+        <IconButton
+          tooltip="Load Data"
+          style={{ position: "absolute", top: 0, right: 0 }}
+          onClick={this.handleToggle}
+        >
+          <NavigationMenu color="white" />
+        </IconButton>
+        <Drawer width={300} openSecondary={true} open={this.state.open} style={{backgroundColor: 'grey'}}>
+          <Upload />{" "}
+          <IconButton
+            onClick={this.handleToggle}
+            style={{
+              position: "absolute",
+              top: 0,
+              right: 0,
+              padding: 0
+            }}
+            iconStyle={{
+              width: 40,
+              height: 40,
+              top: -5
+            }}
+          >
+            <ChevronRight />
+          </IconButton>
+          <Files prepareData={this.prepareData} />
+        </Drawer>
         <div>
           <svg
             width={"100%"}

@@ -7,14 +7,14 @@ import styled from "styled-components";
 import { colors } from "./constants";
 import { storage, database } from "./index";
 var uid = require("uid-safe");
+import FileUpload from "material-ui/svg-icons/file/file-upload";
+import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 
 export class Upload extends React.Component<any, any> {
   handleUpload(e) {
     const file = e.nativeEvent.target.files[0];
-    const fileName = file.name.replace(
-      ".json",
-      "_" + Date.now() + ".json"
-    );
+    const fileName = file.name.replace(".json", "_" + Date.now() + ".json");
     const task = storage.ref("data/" + fileName).put(file);
 
     task.on(
@@ -33,9 +33,24 @@ export class Upload extends React.Component<any, any> {
 
   render() {
     return (
-      <div>
-        <input type="file" onChange={e => this.handleUpload(e)} />
-      </div>
+      <FlatButton label="Upload JSON" containerElement="label" icon={<FileUpload />  }>
+
+        <input
+          type="file"
+          onChange={e => this.handleUpload(e)}
+          style={{
+            cursor: "pointer",
+            position: "absolute",
+            top: 0,
+            bottom: 0,
+            right: 0,
+            left: 0,
+            width: "100%",
+            opacity: 0
+          }}
+        />
+
+      </FlatButton>
     );
   }
 }

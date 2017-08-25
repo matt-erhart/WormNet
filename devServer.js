@@ -20,8 +20,23 @@ Sparky.task("build", () => {
   });
 
   fuse.dev();
-  const app = fuse.bundle("app").instructions(`> index.tsx`)
-  app.watch().hmr();
+  fuse.bundle("vendor")
+  // Watching (to add dependencies) it's damn fast anyway
+  .watch()
+  // first bundle will get HMR related code injected
+  // it will notify as well
+  .hmr()
+  .instructions(" ~ index.tsx") // nothing has changed here
+
+fuse.bundle("app")
+  .watch()
+  // this bundle will not contain HRM related code (as only the first one gets it)
+  // but we would want to HMR it
+  .hmr()
+  // enable sourcemaps for our package
+  .sourceMaps(true)
+  // bundle without deps (we have a vendor for that) + without the api
+  .instructions(" !> [index.tsx]")
   return fuse.run();
 });
 

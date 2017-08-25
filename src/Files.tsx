@@ -41,7 +41,7 @@ export class Files extends React.Component<any, any> {
             return (
               <li
                 key={fileName}
-                style={{ color: "white" }}
+                style={{ color: "black" }}
                 onClick={e => this.handleDownload(e, fileName)}
               >
                 {fileName}
