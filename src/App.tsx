@@ -23,6 +23,8 @@ import NavigationMenu from "material-ui/svg-icons/navigation/menu";
 import ChevronRight from "material-ui/svg-icons/navigation/chevron-right";
 import ChevronLeft from "material-ui/svg-icons/navigation/chevron-left";
 
+import {Line, PropagationCircle, PropagationLine, Neuron} from './Svg'
+
 const plotSetup = (neurons, svgWidth = 1000, svgHeight = 1000) => {
   const xs: number[] = neurons.map(row => +row.pos[0]); //create an array of x positions
   const ys: number[] = neurons.map(row => +row.pos[1]);
@@ -63,18 +65,14 @@ export class App extends React.Component<any, any> {
       propagations: [],
       propagationsOnScreen: [],
       fileName: "",
-      open: true
+      open: false,
+      nLoaded: 0,
     };
   }
   getSourceAndTargetNeurons(neurons, sourceId, targetId) {
-    const source = _.find(
-      neurons,
-      (neuron: neuron) => neuron.id.toLowerCase() === sourceId
-    );
-    const target = _.find(
-      neurons,
-      (neuron: neuron) => neuron.id.toLowerCase() === targetId
-    );
+    const source = _.find(neurons, (neuron: neuron) => neuron.id === sourceId);
+    const target = _.find(neurons, (neuron: neuron) => neuron.id === targetId);
+    if (!source || !target) debugger;
     return { source, target };
   }
 
@@ -82,6 +80,14 @@ export class App extends React.Component<any, any> {
     const savedtime = store.get("time") || 0;
     this.setTime(savedtime);
     const dataDir = "../assets/data";
+    fetch(dataDir + "/feed_json.json")
+      .then(res => res.json())
+      .then(json => {
+        this.prepareData(json);
+      });
+  }
+  componentDidMount(){
+    this.loop()
   }
 
   prepareData = json => {
@@ -92,12 +98,17 @@ export class App extends React.Component<any, any> {
     const { neurons, ...plotMeta } = plotSetup(neuronData, svgWidth, svgHeight);
     this.setState({ neurons });
 
+    neurons.forEach(neuron => {
+      const nSpikes = neuron.spikeTimes.length;
+      const nProps = _.filter(propagations, p => p.source.id === neuron.id);
+    });
+
     this.setState({ plotMeta });
     const scaledLinks = links.map(link => {
       const { source, target } = this.getSourceAndTargetNeurons(
         neurons,
-        link.source.id.toLowerCase(),
-        link.target.id.toLowerCase()
+        link.source.id,
+        link.target.id
       );
       const sx = source.posScaled[0];
       const sy = source.posScaled[1];
@@ -106,23 +117,35 @@ export class App extends React.Component<any, any> {
       return { sx, sy, tx, ty, id: link.id };
     });
     this.setState({ links: scaledLinks });
+    this.setTime(this.state.time)
   };
   componentDidUpdate() {
     store.set("time", this.state.time);
   }
 
+  loop = () => {
+    if (this.state.time < 6000 && this.state.isPlaying) this.setTime(this.state.time + 1);
+    window.requestAnimationFrame(this.loop);
+  }
+
   startTimer = () => {
-    //d3.interval fires every 35ms
-    this.timer = d3.interval(elapsed => {
-      //save to this.timer so we can use this.timer.stop()
-      if (this.state.time < 6000) this.setTime(this.state.time + 1);
-      //   this.setState({ time: this.state.time + 1 }); //increment time this way so react will rerender on change
-      // this.activationLocations(this.state.propagation, this.state.time);
-    }, 10);
+    this.setState({ isPlaying: true });
+    
+
+
+    // //d3.interval fires every 35ms
+    // this.timer = d3.interval(elapsed => {
+    //   //save to this.timer so we can use this.timer.stop()
+    //   if (this.state.time < 6000) this.setTime(this.state.time + 1);
+    //   //   this.setState({ time: this.state.time + 1 }); //increment time this way so react will rerender on change
+    //   // this.activationLocations(this.state.propagation, this.state.time);
+    // }, 10);
+
+    // this.timer = requestAnimationFrame()
   };
 
   pauseTimer = () => {
-    this.timer.stop();
+    this.timer = false;
     this.setState({ isPlaying: false });
   };
 
@@ -164,6 +187,7 @@ export class App extends React.Component<any, any> {
         p.source.id,
         p.target.id
       );
+
       const pos = d3.interpolateObject(source.posScaled, target.posScaled)(
         progress
       );
@@ -189,8 +213,9 @@ export class App extends React.Component<any, any> {
     if (!svgWidth || !svgHeight)
       return (
         <div>
-          <Upload />
-          <Files prepareData={this.prepareData} />
+          loading...
+          {/* <Upload />
+          <Files prepareData={this.prepareData} /> */}
         </div>
       );
     const nTimes = 6000; //data[0].spikes.length;
@@ -207,7 +232,12 @@ export class App extends React.Component<any, any> {
         >
           <NavigationMenu color="white" />
         </IconButton>
-        <Drawer width={300} openSecondary={true} open={this.state.open} style={{backgroundColor: 'grey'}}>
+        <Drawer
+          width={300}
+          openSecondary={true}
+          open={this.state.open}
+          style={{ backgroundColor: "grey" }}
+        >
           <Upload />{" "}
           <IconButton
             onClick={this.handleToggle}
@@ -237,7 +267,7 @@ export class App extends React.Component<any, any> {
             {links.map((link, i) => {
               const { sx, sy, tx, ty, id } = link;
               return (
-                <line
+                <Line
                   key={id}
                   x1={sx}
                   y1={sy}
@@ -251,36 +281,22 @@ export class App extends React.Component<any, any> {
             })}
             {propagationsOnScreen.map((p, i) => {
               return (
-                <circle
+                <PropagationCircle
                   key={i + "-circle"}
                   cx={p.pos.current[0]}
                   cy={p.pos.current[1]}
                   r={2} // this ? : business is called a ternary operator. means if isspiking is true return 20 else return 5
                   fill={
-                    p.type === "excites"
-                      ? colors.excitesInActive
-                      : colors.inhibitsInActive
+                    p.type === "excites" ? (
+                      colors.excitesInActive
+                    ) : (
+                      colors.inhibitsInActive
+                    )
                   }
                 />
               );
             })}
-            {propagationsOnScreen.map((p, i) => {
-              return (
-                <line
-                  key={p.id + "-line"}
-                  x1={p.pos.current[0]}
-                  y1={p.pos.current[1]}
-                  x2={p.pos.source[0]}
-                  y2={p.pos.source[1]}
-                  stroke={
-                    p.type === "excites"
-                      ? colors.excitesInActive
-                      : colors.inhibitsInActive
-                  }
-                  strokeWidth={1}
-                />
-              );
-            })}
+
             {neurons.map((neuron, i) => {
               //note this pos.map begings and ends with {}
               //.map is how we loop over arrays. in this case, we return a circle for each posisiton.
@@ -297,7 +313,7 @@ export class App extends React.Component<any, any> {
 
               return (
                 //these parens are important in react
-                <circle
+                <Neuron
                   key={neuron.id}
                   cx={neuron.posScaled[0]}
                   cy={neuron.posScaled[1]}

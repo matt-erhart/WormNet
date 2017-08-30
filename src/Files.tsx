@@ -8,6 +8,9 @@ import { colors } from "./constants";
 import { storage, database } from "./index";
 var uid = require("uid-safe");
 import * as _ from "lodash";
+import { List, ListItem } from "material-ui/List";
+import DeleteForever from "material-ui/svg-icons/action/delete-forever";
+
 export class Files extends React.Component<any, any> {
   fbListener;
   constructor() {
@@ -19,9 +22,11 @@ export class Files extends React.Component<any, any> {
     var ref = database.ref("json_files");
     this.fbListener = ref.on("value", snap => {
       this.setState({ fileNames: _.map(snap.val(), x => (x as any).fileName) });
-      if (this.state.fileNames[0]) this.handleDownload({}, this.state.fileNames[0]);
+      // if (this.state.fileNames[0])
+      //   this.handleDownload({}, this.state.fileNames[0]);
     });
   }
+
   handleDownload(e, fileName) {
     storage.ref("data/" + fileName).getDownloadURL().then(url => {
       fetch(url).then(res => res.json()).then(json => {
@@ -30,25 +35,51 @@ export class Files extends React.Component<any, any> {
     });
   }
   componentWillUnmount() {
-    if (typeof this.fbListener.off === 'function') this.fbListener.off();
+    if (typeof this.fbListener.off === "function") this.fbListener.off();
+  }
+  removeData(e, fileName) {
+    // Create a reference to the file to delete
+    var fileRef = storage.ref("data/" + fileName);
+
+    fileRef
+      .delete()
+      .then(function() {
+        database
+          .ref("json_files")
+          .orderByChild("fileName")
+          .equalTo(fileName)
+          .once("child_added", snap => {
+            database.ref("json_files" + '/' + snap.key).remove()
+          });
+      })
+      .catch(function(error) {
+        // Uh-oh, an error occurred!
+      });
   }
 
   render() {
     return (
-      <ul>
+      <List>
         {this.state.fileNames &&
           this.state.fileNames.map(fileName => {
             return (
-              <li
+              <ListItem
                 key={fileName}
                 style={{ color: "black" }}
                 onClick={e => this.handleDownload(e, fileName)}
               >
                 {fileName}
-              </li>
+                <IconButton
+                  style={{ position: "absolute", top: 10, right: 0 }}
+                  iconStyle={{ position: "absolute", top: 0, right: 0 }}
+                  onClick={e => {this.removeData(e, fileName); e.stopPropagation()}}
+                >
+                  <DeleteForever color="lightgrey" hoverColor="red" />
+                </IconButton>
+              </ListItem>
             );
           })}
-      </ul>
+      </List>
     );
   }
 }

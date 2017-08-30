@@ -14,7 +14,7 @@ Sparky.task("build", () => {
       WebIndexPlugin({
         //makes an index.html
         title: "WormNet",
-        template: "src/index.html"
+        template: "src/dev.html"
       })
     ]
   });

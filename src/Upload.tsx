@@ -12,6 +12,11 @@ import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 
 export class Upload extends React.Component<any, any> {
+  constructor() {
+    super();
+    this.state = { progress: 0 };
+  }
+
   handleUpload(e) {
     const file = e.nativeEvent.target.files[0];
     const fileName = file.name.replace(".json", "_" + Date.now() + ".json");
@@ -19,21 +24,28 @@ export class Upload extends React.Component<any, any> {
 
     task.on(
       "state_changed",
-      function progress(snap) {
-        console.log(snap);
+       (snap) => {
+
+        if (snap.state === 'running') {
+          const progress = (snap.bytesTransferred/snap.totalBytes) * 100;
+          this.setState({progress: Math.round(progress)})
+        } 
       },
-      function error(err) {
+      (err) => {
         console.log(err);
       },
-      function complete() {
+      () => {
         database.ref().child("json_files").push({ fileName: fileName });
+        this.setState({progress: 0})
       }
     );
   }
 
   render() {
+    const {progress} = this.state;
     return (
-      <FlatButton label="Upload JSON" containerElement="label" icon={<FileUpload />  }>
+      <FlatButton label={progress > 0 ? progress + "%" : "Upload JSON" }
+      containerElement="label" icon={<FileUpload />  }>
 
         <input
           type="file"

@@ -5,6 +5,7 @@ import getMuiTheme from "material-ui/styles/getMuiTheme";
 var Perf = require("react-addons-perf"); // ES5 with npm
 (window as any).Perf = Perf;
 
+
 var firebase = require("firebase");
 var config = {
   apiKey: "AIzaSyA5VLHWzUklgmXGQSx51mOvHWx68fTGVp8",
